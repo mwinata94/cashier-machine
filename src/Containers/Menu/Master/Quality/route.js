@@ -2,7 +2,7 @@ import MasterQuality from './Quality';
 
 const MasterQualityRoute = [
   {
-    path: '/master/quality',
+    path: '/menu/master/quality',
     exact: true,
     component: MasterQuality
   }

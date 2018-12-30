@@ -2,7 +2,7 @@ import TransactionAdjust from './Adjust';
 
 const TransactionAdjustRoute = [
   {
-    path: '/transaction/adjust',
+    path: '/menu/transaction/adjust',
     exact: true,
     component: TransactionAdjust
   }

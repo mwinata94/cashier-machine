@@ -2,7 +2,7 @@ import ReportSale from './Sale';
 
 const ReportSaleRoute = [
   {
-    path: '/report/sale',
+    path: '/menu/report/sale',
     exact: true,
     component: ReportSale
   }

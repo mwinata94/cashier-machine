@@ -2,7 +2,7 @@ import ReportInventory from './Inventory';
 
 const ReportInventoryRoute = [
   {
-    path: '/report/inventory',
+    path: '/menu/report/inventory',
     exact: true,
     component: ReportInventory
   }

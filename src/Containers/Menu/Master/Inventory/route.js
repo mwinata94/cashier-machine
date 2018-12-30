@@ -2,7 +2,7 @@ import MasterInventory from './Inventory';
 
 const MasterInventoryRoute = [
   {
-    path: '/master/inventory',
+    path: '/menu/master/inventory',
     exact: true,
     component: MasterInventory
   }

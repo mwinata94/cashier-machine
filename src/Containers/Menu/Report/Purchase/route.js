@@ -2,7 +2,7 @@ import ReportPurchase from './Purchase';
 
 const ReportPurchaseRoute = [
   {
-    path: '/report/purchase',
+    path: '/menu/report/purchase',
     exact: true,
     component: ReportPurchase
   }

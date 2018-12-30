@@ -1,5 +1,6 @@
 import Error404Route from './Containers/Error/404/route';
 import MainRoute from './Containers/Main/route';
+import MenuRoute from './Containers/Menu/route';
 import MenuMasterGroup from './Containers/Menu/Master/Group/route';
 import MenuMasterInventory from './Containers/Menu/Master/Inventory/route';
 import MenuMasterLocation from './Containers/Menu/Master/Location/route';
@@ -19,6 +20,7 @@ import MenuWishList from './Containers/Menu/WishList/route';
 const routes = [
   ...Error404Route,
   ...MainRoute,
+  ...MenuRoute,
   ...MenuMasterGroup,
   ...MenuMasterInventory,
   ...MenuMasterLocation,

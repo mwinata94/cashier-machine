@@ -2,7 +2,7 @@ import TransactionSale from './Sale';
 
 const TransactionSaleRoute = [
   {
-    path: '/transaction/sale',
+    path: '/menu/transaction/sale',
     exact: true,
     component: TransactionSale
   }

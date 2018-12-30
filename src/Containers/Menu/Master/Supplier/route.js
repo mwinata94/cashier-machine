@@ -2,7 +2,7 @@ import MasterSupplier from './Supplier';
 
 const MasterSupplierRoute = [
   {
-    path: '/master/supplier',
+    path: '/menu/master/supplier',
     exact: true,
     component: MasterSupplier
   }

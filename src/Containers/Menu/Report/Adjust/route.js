@@ -2,7 +2,7 @@ import ReportAdjust from './Adjust';
 
 const ReportAdjustRoute = [
   {
-    path: '/report/adjust',
+    path: '/menu/report/adjust',
     exact: true,
     component: ReportAdjust
   }

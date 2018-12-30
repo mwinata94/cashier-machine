@@ -2,7 +2,7 @@ import WishList from './WishList';
 
 const WishListRoute = [
   {
-    path: '/wishlist',
+    path: '/menu/wishlist',
     exact: true,
     component: WishList
   }

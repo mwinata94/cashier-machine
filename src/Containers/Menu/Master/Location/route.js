@@ -2,7 +2,7 @@ import MasterLocation from './Location';
 
 const MasterLocationRoute = [
   {
-    path: '/master/location',
+    path: '/menu/master/location',
     exact: true,
     component: MasterLocation
   }

@@ -2,7 +2,7 @@ import MasterMechanic from './Mechanic';
 
 const MasterMechanicRoute = [
   {
-    path: '/master/mechanic',
+    path: '/menu/master/mechanic',
     exact: true,
     component: MasterMechanic
   }

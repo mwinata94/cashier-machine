@@ -2,7 +2,7 @@ import MasterRetailSale from './RetailSale';
 
 const MasterRetailSaleRoute = [
   {
-    path: '/master/retailsale',
+    path: '/menu/master/retailsale',
     exact: true,
     component: MasterRetailSale
   }
