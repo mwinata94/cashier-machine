@@ -28,12 +28,12 @@ class Main extends Component {
       <div className="hero is-fullheight">
         <div className="hero-body">
           <div className="tile is-ancestor">
-            <div className="tile is-parent" />
+            <div className="tile" />
             <div className="tile is-parent is-vertical">
               <div className="tile">
                 <div className="tile is-child">
                   <input
-                    className="input is-large is-expanded"
+                    className="input is-large"
                     name="username"
                     onChange={this.onChange}
                     type="text"
@@ -42,7 +42,7 @@ class Main extends Component {
                 </div>
                 <div className="tile is-child">
                   <input
-                    className="input is-large is-expanded"
+                    className="input is-large"
                     name="password"
                     onChange={this.onChange}
                     type="password"
@@ -50,16 +50,14 @@ class Main extends Component {
                   />
                 </div>
               </div>
-              <div className="tile is-child">
-                <div
-                  className="button is-info is-large is-fullwidth"
-                  onClick={this.onLogin}
-                >
-                  Login
-                </div>
+              <div
+                className="tile is-child button is-info is-large"
+                onClick={this.onLogin}
+              >
+                Login
               </div>
             </div>
-            <div className="tile is-parent" />
+            <div className="tile" />
           </div>
         </div>
       </div>

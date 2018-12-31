@@ -1,0 +1,45 @@
+import React, { Component } from 'react';
+import FormControl from './FormControl';
+
+class Form extends Component {
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(event) {
+    this.setState({ [event.target.name]: event.target.value });
+  }
+
+  render() {
+    return (
+      <div className="tile is-ancestor">
+        <div className="tile" />
+        <div className="tile is-vertical">
+          {this.props.queries.map((e, i) => (
+            <div key={i} className="tile is-parent">
+              <div className="tile is-child label">{e.name}</div>
+              <div className="tile is-child">
+                <FormControl e={e} onChange={this.onChange} />
+              </div>
+            </div>
+          ))}
+          <div className="tile is-parent">
+            {this.props.buttons.map((e, i) => (
+              <div
+                key={i}
+                className="tile is-child button is-info"
+                onClick={e.onClick}
+              >
+                {e.name}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="tile" />
+      </div>
+    );
+  }
+}
+
+export default Form;
