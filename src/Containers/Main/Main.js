@@ -27,28 +27,29 @@ class Main extends Component {
     return (
       <div className="hero is-fullheight">
         <div className="hero-body">
-          <div className="tile is-vertical is-ancestor">
-            <div className="tile is-parent">
-              <div className="tile is-child">
-                <input
-                  className="input is-large is-expanded"
-                  name="username"
-                  onChange={this.onChange}
-                  type="text"
-                  placeholder="Username"
-                />
+          <div className="tile is-ancestor">
+            <div className="tile is-parent" />
+            <div className="tile is-parent is-vertical">
+              <div className="tile">
+                <div className="tile is-child">
+                  <input
+                    className="input is-large is-expanded"
+                    name="username"
+                    onChange={this.onChange}
+                    type="text"
+                    placeholder="Username"
+                  />
+                </div>
+                <div className="tile is-child">
+                  <input
+                    className="input is-large is-expanded"
+                    name="password"
+                    onChange={this.onChange}
+                    type="password"
+                    placeholder="Password"
+                  />
+                </div>
               </div>
-              <div className="tile is-child">
-                <input
-                  className="input is-large is-expanded"
-                  name="password"
-                  onChange={this.onChange}
-                  type="password"
-                  placeholder="Password"
-                />
-              </div>
-            </div>
-            <div className="tile is-parent">
               <div className="tile is-child">
                 <div
                   className="button is-info is-large is-fullwidth"
@@ -58,6 +59,7 @@ class Main extends Component {
                 </div>
               </div>
             </div>
+            <div className="tile is-parent" />
           </div>
         </div>
       </div>
