@@ -4,11 +4,21 @@ class FormControl extends Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
+    this.onLabelChange = this.onLabelChange.bind(this);
     this.onSelectChange = this.onSelectChange.bind(this);
   }
 
   onInputChange(event) {
     this.props.onChange(event);
+  }
+
+  onLabelChange() {
+    this.props.onChange({
+      target: {
+        name: this.props.e.name,
+        value: this.props.e.value
+      }
+    });
   }
 
   onSelectChange(option) {
@@ -31,6 +41,8 @@ class FormControl extends Component {
           placeholder={this.props.e.name}
         />
       ),
+      label: (this.onLabelChange(),
+      <div className="label is-large"> {this.props.e.value}</div>),
       select: (
         <div class="select is-info is-large">
           <select onChange={this.onSelectChange}>
