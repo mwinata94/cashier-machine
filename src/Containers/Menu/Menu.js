@@ -4,10 +4,9 @@ import NavigationBar from '../../Generics/NavigationBar/NavigationBar';
 class Menu extends Component {
   render() {
     return (
-      <div className="hero is-fullheight">
-        <div className="hero-head">
-          <NavigationBar table="menu" />
-        </div>
+      <div>
+        <NavigationBar table="menu" />
+        <section className="hero is-fullheight-with-navbar" />
       </div>
     );
   }
