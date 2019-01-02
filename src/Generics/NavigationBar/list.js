@@ -21,6 +21,52 @@ export const masterGroup = [
   }
 ];
 
+export const masterLocation = [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/location/create')
+  },
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/location/search')
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/location')
+  },
+  {
+    name: 'back',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const masterQuality = [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/quality/create')
+  },
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/quality/search')
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/quality')
+  },
+  {
+    name: 'back',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
 export const menu = [
   {
     name: 'master',

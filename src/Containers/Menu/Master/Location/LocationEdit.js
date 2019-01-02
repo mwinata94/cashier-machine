@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
 import Form from '../../../../Generics/Form/Form';
 
-class MasterGroupSearch extends Component {
+class MasterLocationEdit extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -10,26 +10,27 @@ class MasterGroupSearch extends Component {
   }
 
   componentDidMount() {
-    if (!this.state.searchForm) {
+    if (!this.state.editForm) {
       this.setState({
-        searchForm: {
+        editForm: {
           queries: [
             {
               name: 'id',
-              control: 'input'
+              control: 'input',
+              value: this.props.match.params.id
             },
             {
               name: 'name',
-              control: 'input'
+              control: 'input',
+              value: this.props.match.params.name
             }
           ],
           buttons: [
             {
-              name: 'search',
+              name: 'save',
               onClick: _ => {
-                /* TODO
-                    api search 
-                */
+                /* TODO api edit */
+                window.location = '/menu/master/location';
               }
             }
           ]
@@ -46,12 +47,12 @@ class MasterGroupSearch extends Component {
     return (
       <div className="hero is-fullheight">
         <div className="hero-head">
-          <NavigationBar table="masterGroup" />
+          <NavigationBar table="masterLocation" />
         </div>
         <div className="hero-body">
-          {this.state.searchForm ? (
+          {this.state.editForm ? (
             <Form
-              formAttributes={this.state.searchForm}
+              formAttributes={this.state.editForm}
               onChange={this.onChange}
             />
           ) : (
@@ -65,4 +66,4 @@ class MasterGroupSearch extends Component {
   }
 }
 
-export default MasterGroupSearch;
+export default MasterLocationEdit;

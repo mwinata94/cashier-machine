@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
 import Form from '../../../../Generics/Form/Form';
 
-class MasterGroupSearch extends Component {
+class MasterQualityCreate extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -10,9 +10,9 @@ class MasterGroupSearch extends Component {
   }
 
   componentDidMount() {
-    if (!this.state.searchForm) {
+    if (!this.state.createForm) {
       this.setState({
-        searchForm: {
+        createForm: {
           queries: [
             {
               name: 'id',
@@ -25,11 +25,10 @@ class MasterGroupSearch extends Component {
           ],
           buttons: [
             {
-              name: 'search',
+              name: 'create',
               onClick: _ => {
-                /* TODO
-                    api search 
-                */
+                /* TODO api create */
+                window.location = '/menu/master/quality';
               }
             }
           ]
@@ -46,12 +45,12 @@ class MasterGroupSearch extends Component {
     return (
       <div className="hero is-fullheight">
         <div className="hero-head">
-          <NavigationBar table="masterGroup" />
+          <NavigationBar table="masterQuality" />
         </div>
         <div className="hero-body">
-          {this.state.searchForm ? (
+          {this.state.createForm ? (
             <Form
-              formAttributes={this.state.searchForm}
+              formAttributes={this.state.createForm}
               onChange={this.onChange}
             />
           ) : (
@@ -65,4 +64,4 @@ class MasterGroupSearch extends Component {
   }
 }
 
-export default MasterGroupSearch;
+export default MasterQualityCreate;

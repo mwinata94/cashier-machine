@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
 import Form from '../../../../Generics/Form/Form';
 
-class MasterGroupSearch extends Component {
+class MasterLocationSearch extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -46,7 +46,7 @@ class MasterGroupSearch extends Component {
     return (
       <div className="hero is-fullheight">
         <div className="hero-head">
-          <NavigationBar table="masterGroup" />
+          <NavigationBar table="masterLocation" />
         </div>
         <div className="hero-body">
           {this.state.searchForm ? (
@@ -65,4 +65,4 @@ class MasterGroupSearch extends Component {
   }
 }
 
-export default MasterGroupSearch;
+export default MasterLocationSearch;

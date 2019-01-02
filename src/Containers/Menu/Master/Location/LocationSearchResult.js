@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
 import DisplayTable from '../../../../Generics/DisplayTable/DisplayTable';
 
-class MasterLocation extends Component {
+class MasterLocationSearchResult extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -11,9 +11,10 @@ class MasterLocation extends Component {
   componentDidMount() {
     // TODO
     // api call to fetch location tables
+    // based on params :id and/or :name
     // onClick edit
     this.setState({
-      defaultTable: {
+      resultTable: {
         columns: ['id', 'name'],
         rows: [
           {
@@ -34,8 +35,8 @@ class MasterLocation extends Component {
           <NavigationBar table="masterLocation" />
         </div>
         <div className="hero-body">
-          {this.state.defaultTable ? (
-            <DisplayTable table={this.state.defaultTable} />
+          {this.state.resultTable ? (
+            <DisplayTable table={this.state.resultTable} />
           ) : (
             <div className="container has-text-centered is-size-3">
               Loading...
@@ -47,4 +48,4 @@ class MasterLocation extends Component {
   }
 }
 
-export default MasterLocation;
+export default MasterLocationSearchResult;
