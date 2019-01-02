@@ -21,6 +21,12 @@ const MasterQualityRoute = [
     component: MasterQualityEdit
   },
   {
+    path:
+      '/menu/master/quality/edit/id/:id/name/:name/description/:description',
+    exact: true,
+    component: MasterQualityEdit
+  },
+  {
     path: '/menu/master/quality/search',
     exact: true,
     component: MasterQualitySearch
@@ -36,7 +42,28 @@ const MasterQualityRoute = [
     component: MasterQualitySearchResult
   },
   {
+    path: '/menu/master/quality/search/description/:description',
+    exact: true,
+    component: MasterQualitySearchResult
+  },
+  {
     path: '/menu/master/quality/search/id/:id/name/:name',
+    exact: true,
+    component: MasterQualitySearchResult
+  },
+  {
+    path: '/menu/master/quality/search/id/:id/description/:description',
+    exact: true,
+    component: MasterQualitySearchResult
+  },
+  {
+    path: '/menu/master/quality/search/name/:name/description/:description',
+    exact: true,
+    component: MasterQualitySearchResult
+  },
+  {
+    path:
+      '/menu/master/quality/search/id/:id/name/:name/description/:description',
     exact: true,
     component: MasterQualitySearchResult
   }

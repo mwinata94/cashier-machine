@@ -21,6 +21,10 @@ class MasterGroupCreate extends Component {
             {
               name: 'name',
               control: 'input'
+            },
+            {
+              name: 'description',
+              control: 'input'
             }
           ],
           buttons: [
@@ -43,22 +47,22 @@ class MasterGroupCreate extends Component {
 
   render() {
     return (
-      <div className="hero is-fullheight">
-        <div className="hero-head">
-          <NavigationBar table="masterGroup" />
-        </div>
-        <div className="hero-body">
-          {this.state.createForm ? (
-            <Form
-              formAttributes={this.state.createForm}
-              onChange={this.onChange}
-            />
-          ) : (
-            <div className="container has-text-centered is-size-3">
-              Loading...
-            </div>
-          )}
-        </div>
+      <div>
+        <NavigationBar table="masterGroup" />
+        <section className="hero is-fullheight-with-navbar">
+          <div className="hero-body">
+            {this.state.createForm ? (
+              <Form
+                formAttributes={this.state.createForm}
+                onChange={this.onChange}
+              />
+            ) : (
+              <div className="container has-text-centered">
+                <a class="button is-success is-loading is-large">Loading</a>
+              </div>
+            )}
+          </div>
+        </section>
       </div>
     );
   }

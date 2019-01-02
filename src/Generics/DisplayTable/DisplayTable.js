@@ -14,7 +14,7 @@ class DisplayTable extends Component {
           </thead>
           <tbody>
             {this.props.table.rows.map((e, i) => (
-              <tr key={i} onClick={e.onClick}>
+              <tr key={i} onClick={e.onClick} onMouseEnter={e.onMouseEnter}>
                 {e.columns.map((e, i) => (
                   <td key={i}>{e}</td>
                 ))}

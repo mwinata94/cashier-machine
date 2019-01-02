@@ -21,6 +21,11 @@ const MasterGroupRoute = [
     component: MasterGroupEdit
   },
   {
+    path: '/menu/master/group/edit/id/:id/name/:name/description/:description',
+    exact: true,
+    component: MasterGroupEdit
+  },
+  {
     path: '/menu/master/group/search',
     exact: true,
     component: MasterGroupSearch
@@ -36,7 +41,28 @@ const MasterGroupRoute = [
     component: MasterGroupSearchResult
   },
   {
+    path: '/menu/master/group/search/description/:description',
+    exact: true,
+    component: MasterGroupSearchResult
+  },
+  {
     path: '/menu/master/group/search/id/:id/name/:name',
+    exact: true,
+    component: MasterGroupSearchResult
+  },
+  {
+    path: '/menu/master/group/search/id/:id/description/:description',
+    exact: true,
+    component: MasterGroupSearchResult
+  },
+  {
+    path: '/menu/master/group/search/name/:name/description/:description',
+    exact: true,
+    component: MasterGroupSearchResult
+  },
+  {
+    path:
+      '/menu/master/group/search/id/:id/name/:name/description/:description',
     exact: true,
     component: MasterGroupSearchResult
   }

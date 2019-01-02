@@ -5,7 +5,9 @@ import DisplayTable from '../../../../Generics/DisplayTable/DisplayTable';
 class MasterLocation extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      footer: ' '
+    };
   }
 
   componentDidMount() {
@@ -20,7 +22,8 @@ class MasterLocation extends Component {
             columns: ['QWE', 'Qwerty'],
             onClick: _ =>
               (window.location =
-                '/menu/master/location/edit/id/QWE/name/Qwerty')
+                '/menu/master/location/edit/id/QWE/name/Qwerty/description/QWE%20Qwerty'),
+            onMouseEnter: _ => this.setState({ footer: 'QWE Qwerty' })
           }
         ]
       }
@@ -29,19 +32,24 @@ class MasterLocation extends Component {
 
   render() {
     return (
-      <div className="hero is-fullheight">
-        <div className="hero-head">
-          <NavigationBar table="masterLocation" />
-        </div>
-        <div className="hero-body">
-          {this.state.defaultTable ? (
-            <DisplayTable table={this.state.defaultTable} />
-          ) : (
-            <div className="container has-text-centered is-size-3">
-              Loading...
+      <div>
+        <NavigationBar table="masterLocation" />
+        <section className="hero is-fullheight-with-navbar">
+          <div className="hero-body">
+            {this.state.defaultTable ? (
+              <DisplayTable table={this.state.defaultTable} />
+            ) : (
+              <div className="container has-text-centered">
+                <a class="button is-success is-loading is-large">Loading</a>
+              </div>
+            )}
+          </div>
+          <div className="hero-foot has-text-centered">
+            <div className="button is-primary is-fullwidth is-large">
+              {this.state.footer}
             </div>
-          )}
-        </div>
+          </div>
+        </section>
       </div>
     );
   }

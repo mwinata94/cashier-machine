@@ -21,6 +21,12 @@ const MasterLocationRoute = [
     component: MasterLocationEdit
   },
   {
+    path:
+      '/menu/master/location/edit/id/:id/name/:name/description/:description',
+    exact: true,
+    component: MasterLocationEdit
+  },
+  {
     path: '/menu/master/location/search',
     exact: true,
     component: MasterLocationSearch
@@ -36,7 +42,28 @@ const MasterLocationRoute = [
     component: MasterLocationSearchResult
   },
   {
+    path: '/menu/master/location/search/description/:description',
+    exact: true,
+    component: MasterLocationSearchResult
+  },
+  {
     path: '/menu/master/location/search/id/:id/name/:name',
+    exact: true,
+    component: MasterLocationSearchResult
+  },
+  {
+    path: '/menu/master/location/search/id/:id/description/:description',
+    exact: true,
+    component: MasterLocationSearchResult
+  },
+  {
+    path: '/menu/master/location/search/name/:name/description/:description',
+    exact: true,
+    component: MasterLocationSearchResult
+  },
+  {
+    path:
+      '/menu/master/location/search/id/:id/name/:name/description/:description',
     exact: true,
     component: MasterLocationSearchResult
   }

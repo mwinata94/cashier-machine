@@ -6,7 +6,11 @@ class MasterQualitySearch extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
-    this.state = {};
+    this.state = {
+      id: '',
+      name: '',
+      description: ''
+    };
   }
 
   componentDidMount() {
@@ -21,6 +25,10 @@ class MasterQualitySearch extends Component {
             {
               name: 'name',
               control: 'input'
+            },
+            {
+              name: 'description',
+              control: 'input'
             }
           ],
           buttons: [
@@ -30,6 +38,13 @@ class MasterQualitySearch extends Component {
                 /* TODO
                     api search 
                 */
+                window.location = `/menu/master/quality/search${
+                  '' === this.state.id ? '' : `/id/${this.state.id}`
+                }${'' === this.state.name ? '' : `/name/${this.state.name}`}${
+                  '' === this.state.description
+                    ? ''
+                    : `/description/${this.state.description}`
+                }`;
               }
             }
           ]
@@ -44,22 +59,22 @@ class MasterQualitySearch extends Component {
 
   render() {
     return (
-      <div className="hero is-fullheight">
-        <div className="hero-head">
-          <NavigationBar table="masterQuality" />
-        </div>
-        <div className="hero-body">
-          {this.state.searchForm ? (
-            <Form
-              formAttributes={this.state.searchForm}
-              onChange={this.onChange}
-            />
-          ) : (
-            <div className="container has-text-centered is-size-3">
-              Loading...
-            </div>
-          )}
-        </div>
+      <div>
+        <NavigationBar table="masterQuality" />
+        <section className="hero is-fullheight-with-navbar">
+          <div className="hero-body">
+            {this.state.searchForm ? (
+              <Form
+                formAttributes={this.state.searchForm}
+                onChange={this.onChange}
+              />
+            ) : (
+              <div className="container has-text-centered">
+                <a class="button is-success is-loading is-large">Loading</a>
+              </div>
+            )}
+          </div>
+        </section>
       </div>
     );
   }

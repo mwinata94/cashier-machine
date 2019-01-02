@@ -23,6 +23,13 @@ class MasterQualityEdit extends Component {
               name: 'name',
               control: 'input',
               value: this.props.match.params.name
+            },
+            {
+              name: 'description',
+              control: 'input',
+              value: this.props.match.params.description
+                ? this.props.match.params.description
+                : ''
             }
           ],
           buttons: [
@@ -45,22 +52,22 @@ class MasterQualityEdit extends Component {
 
   render() {
     return (
-      <div className="hero is-fullheight">
-        <div className="hero-head">
-          <NavigationBar table="masterQuality" />
-        </div>
-        <div className="hero-body">
-          {this.state.editForm ? (
-            <Form
-              formAttributes={this.state.editForm}
-              onChange={this.onChange}
-            />
-          ) : (
-            <div className="container has-text-centered is-size-3">
-              Loading...
-            </div>
-          )}
-        </div>
+      <div>
+        <NavigationBar table="masterQuality" />
+        <section className="hero is-fullheight-with-navbar">
+          <div className="hero-body">
+            {this.state.editForm ? (
+              <Form
+                formAttributes={this.state.editForm}
+                onChange={this.onChange}
+              />
+            ) : (
+              <div className="container has-text-centered">
+                <a class="button is-success is-loading is-large">Loading</a>
+              </div>
+            )}
+          </div>
+        </section>
       </div>
     );
   }
