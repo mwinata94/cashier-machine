@@ -74,33 +74,18 @@ export const menu = [
     onClick: event => {},
     child: [
       {
-        name: 'group',
-        onClick: event => {
-          window.location = '/menu/master/group';
-        }
-      },
-      {
         name: 'inventory',
         onClick: event => {
           window.location = '/menu/master/inventory';
         }
       },
       {
-        name: 'location',
-        onClick: event => {
-          window.location = '/menu/master/location';
-        }
+        name: 'divider'
       },
       {
-        name: 'mechanic',
+        name: 'supplier',
         onClick: event => {
-          window.location = '/menu/master/mechanic';
-        }
-      },
-      {
-        name: 'quality',
-        onClick: event => {
-          window.location = '/menu/master/quality';
+          window.location = '/menu/master/supplier';
         }
       },
       {
@@ -110,9 +95,30 @@ export const menu = [
         }
       },
       {
-        name: 'supplier',
+        name: 'mechanic',
         onClick: event => {
-          window.location = '/menu/master/supplier';
+          window.location = '/menu/master/mechanic';
+        }
+      },
+      {
+        name: 'divider'
+      },
+      {
+        name: 'group',
+        onClick: event => {
+          window.location = '/menu/master/group';
+        }
+      },
+      {
+        name: 'location',
+        onClick: event => {
+          window.location = '/menu/master/location';
+        }
+      },
+      {
+        name: 'quality',
+        onClick: event => {
+          window.location = '/menu/master/quality';
         }
       }
     ]

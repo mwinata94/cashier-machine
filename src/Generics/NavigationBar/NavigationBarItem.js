@@ -10,15 +10,19 @@ class NavigationBarItem extends Component {
           </a>
           <div className="navbar-dropdown">
             {this.props.e.child.map((e, i) => {
-              return (
-                <a
-                  key={i}
-                  className="navbar-item is-size-3"
-                  onClick={e.onClick}
-                >
-                  {e.name}
-                </a>
-              );
+              if ('divider' === e.name) {
+                return <hr key={i} className="navbar-divider" />;
+              } else {
+                return (
+                  <a
+                    key={i}
+                    className="navbar-item is-size-3"
+                    onClick={e.onClick}
+                  >
+                    {e.name}
+                  </a>
+                );
+              }
             })}
           </div>
         </div>
