@@ -1,3 +1,26 @@
+export const masterSupplier = [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/supplier/create')
+  },
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/supplier/search')
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/supplier')
+  },
+  {
+    name: 'back',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
 export const masterGroup = [
   {
     name: 'create',

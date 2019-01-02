@@ -54,7 +54,8 @@ class MasterLocationEdit extends Component {
     return (
       <div>
         <NavigationBar table="masterLocation" />
-        <section className="hero is-fullheight-with-navbar">
+        <section className="hero is-fullheight">
+          <div className="hero-head is-size-2">__</div>
           <div className="hero-body">
             {this.state.editForm ? (
               <Form
@@ -63,7 +64,7 @@ class MasterLocationEdit extends Component {
               />
             ) : (
               <div className="container has-text-centered">
-                <a class="button is-success is-loading is-large">Loading</a>
+                <a className="button is-success is-loading is-large">Loading</a>
               </div>
             )}
           </div>

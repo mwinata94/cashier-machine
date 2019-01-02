@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
 import Form from '../../../../Generics/Form/Form';
 
-class MasterQualityEdit extends Component {
+class MasterSupplierCreate extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -10,34 +10,37 @@ class MasterQualityEdit extends Component {
   }
 
   componentDidMount() {
-    if (!this.state.editForm) {
+    if (!this.state.createForm) {
       this.setState({
-        editForm: {
+        createForm: {
           queries: [
             {
               name: 'id',
-              control: 'input',
-              value: this.props.match.params.id
+              control: 'input'
             },
             {
               name: 'name',
-              control: 'input',
-              value: this.props.match.params.name
+              control: 'input'
+            },
+            {
+              name: 'address',
+              control: 'input'
+            },
+            {
+              name: 'phone number',
+              control: 'input'
             },
             {
               name: 'description',
-              control: 'input',
-              value: this.props.match.params.description
-                ? this.props.match.params.description
-                : ''
+              control: 'input'
             }
           ],
           buttons: [
             {
-              name: 'save',
+              name: 'create',
               onClick: _ => {
-                /* TODO api edit */
-                window.location = '/menu/master/quality';
+                /* TODO api create */
+                window.location = '/menu/master/supplier';
               }
             }
           ]
@@ -53,13 +56,13 @@ class MasterQualityEdit extends Component {
   render() {
     return (
       <div>
-        <NavigationBar table="masterQuality" />
+        <NavigationBar table="masterSupplier" />
         <section className="hero is-fullheight">
           <div className="hero-head is-size-2">__</div>
           <div className="hero-body">
-            {this.state.editForm ? (
+            {this.state.createForm ? (
               <Form
-                formAttributes={this.state.editForm}
+                formAttributes={this.state.createForm}
                 onChange={this.onChange}
               />
             ) : (
@@ -74,4 +77,4 @@ class MasterQualityEdit extends Component {
   }
 }
 
-export default MasterQualityEdit;
+export default MasterSupplierCreate;

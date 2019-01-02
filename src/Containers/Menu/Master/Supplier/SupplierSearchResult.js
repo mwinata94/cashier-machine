@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
 import DisplayTable from '../../../../Generics/DisplayTable/DisplayTable';
 
-class MasterSupplier extends Component {
+class MasterSupplierSearchResult extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,9 +13,10 @@ class MasterSupplier extends Component {
   componentDidMount() {
     // TODO
     // api call to fetch supplier tables
+    // based on params :id and/or :name
     // onClick edit
     this.setState({
-      defaultTable: {
+      resultTable: {
         columns: ['id', 'name', 'address', 'phone number'],
         rows: [
           {
@@ -37,8 +38,8 @@ class MasterSupplier extends Component {
         <section className="hero is-fullheight">
           <div className="hero-head is-size-2">__</div>
           <div className="hero-body">
-            {this.state.defaultTable ? (
-              <DisplayTable table={this.state.defaultTable} />
+            {this.state.resultTable ? (
+              <DisplayTable table={this.state.resultTable} />
             ) : (
               <div className="container has-text-centered">
                 <a className="button is-success is-loading is-large">Loading</a>
@@ -63,4 +64,4 @@ class MasterSupplier extends Component {
   }
 }
 
-export default MasterSupplier;
+export default MasterSupplierSearchResult;

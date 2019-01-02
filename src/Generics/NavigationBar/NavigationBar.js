@@ -30,7 +30,10 @@ class NavigationBar extends Component {
 
   render() {
     return (
-      <nav className="navbar is-size-3 is-info" aria-label="main navigation">
+      <nav
+        className="navbar is-size-3 is-info is-fixed-top"
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
           <a className="navbar-item">
             <img

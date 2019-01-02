@@ -6,7 +6,9 @@ class Menu extends Component {
     return (
       <div>
         <NavigationBar table="menu" />
-        <section className="hero is-fullheight-with-navbar" />
+        <section className="hero is-fullheight">
+          <div className="hero-head is-size-2">__</div>
+        </section>
       </div>
     );
   }

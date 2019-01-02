@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
 import Form from '../../../../Generics/Form/Form';
 
-class MasterQualityEdit extends Component {
+class MasterSupplierEdit extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -25,6 +25,20 @@ class MasterQualityEdit extends Component {
               value: this.props.match.params.name
             },
             {
+              name: 'address',
+              control: 'input',
+              value: this.props.match.params.address
+                ? this.props.match.params.address
+                : ''
+            },
+            {
+              name: 'phone number',
+              control: 'input',
+              value: this.props.match.params.phoneNumber
+                ? this.props.match.params.phoneNumber
+                : ''
+            },
+            {
               name: 'description',
               control: 'input',
               value: this.props.match.params.description
@@ -37,7 +51,7 @@ class MasterQualityEdit extends Component {
               name: 'save',
               onClick: _ => {
                 /* TODO api edit */
-                window.location = '/menu/master/quality';
+                window.location = '/menu/master/supplier';
               }
             }
           ]
@@ -53,7 +67,7 @@ class MasterQualityEdit extends Component {
   render() {
     return (
       <div>
-        <NavigationBar table="masterQuality" />
+        <NavigationBar table="masterSupplier" />
         <section className="hero is-fullheight">
           <div className="hero-head is-size-2">__</div>
           <div className="hero-body">
@@ -74,4 +88,4 @@ class MasterQualityEdit extends Component {
   }
 }
 
-export default MasterQualityEdit;
+export default MasterSupplierEdit;

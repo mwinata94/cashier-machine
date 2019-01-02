@@ -22,7 +22,7 @@ class MasterLocation extends Component {
             columns: ['QWE', 'Qwerty'],
             onClick: _ =>
               (window.location =
-                '/menu/master/location/edit/id/QWE/name/Qwerty/description/QWE%20Qwerty'),
+                '/menu/master/location/edit/id/QWE/name/Qwerty/description/QWE Qwerty'),
             onMouseEnter: _ => this.setState({ footer: 'QWE Qwerty' })
           }
         ]
@@ -34,22 +34,30 @@ class MasterLocation extends Component {
     return (
       <div>
         <NavigationBar table="masterLocation" />
-        <section className="hero is-fullheight-with-navbar">
+        <section className="hero is-fullheight">
+          <div className="hero-head is-size-2">__</div>
           <div className="hero-body">
             {this.state.defaultTable ? (
               <DisplayTable table={this.state.defaultTable} />
             ) : (
               <div className="container has-text-centered">
-                <a class="button is-success is-loading is-large">Loading</a>
+                <a className="button is-success is-loading is-large">Loading</a>
               </div>
             )}
           </div>
-          <div className="hero-foot has-text-centered">
-            <div className="button is-primary is-fullwidth is-large">
-              {this.state.footer}
-            </div>
-          </div>
+          <div className="hero-foot is-size-3">__</div>
         </section>
+        <nav
+          className="navbar is-size-4 is-primary is-fixed-bottom"
+          aria-label="main navigation"
+        >
+          <div
+            className="navbar-brand"
+            style={{ flexGrow: 1, justifyContent: 'center' }}
+          >
+            <a className="navbar-item">{this.state.footer}</a>
+          </div>
+        </nav>
       </div>
     );
   }
