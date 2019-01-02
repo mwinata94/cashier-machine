@@ -4,21 +4,15 @@ class FormControl extends Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    this.onLabelChange = this.onLabelChange.bind(this);
     this.onSelectChange = this.onSelectChange.bind(this);
+    this.state = {
+      value: this.props.e.value ? this.props.e.value : ''
+    };
   }
 
   onInputChange(event) {
+    this.setState({ value: event.target.value });
     this.props.onChange(event);
-  }
-
-  onLabelChange() {
-    this.props.onChange({
-      target: {
-        name: this.props.e.name,
-        value: this.props.e.value
-      }
-    });
   }
 
   onSelectChange(option) {
@@ -39,23 +33,23 @@ class FormControl extends Component {
           onChange={this.onInputChange}
           type={this.props.e.name}
           placeholder={this.props.e.name}
+          value={this.state.value}
         />
       ),
-      label: (this.onLabelChange(),
-      <div className="label is-large"> {this.props.e.value}</div>),
+      label: <div className="label is-large"> {this.state.value}</div>,
       select: (
         <div class="select is-info is-large">
-          <select onChange={this.onSelectChange}>
-            {this.props.e.items.map((e, i) => (
-              <option key={i} value={e}>
-                e
-              </option>
-            ))}
+          <select>
+            {this.props.e.items &&
+              this.props.e.items.map((e, i) => (
+                <option key={i} value={e}>
+                  e
+                </option>
+              ))}
           </select>
         </div>
       )
     };
-
     return type[this.props.e.control];
   }
 }

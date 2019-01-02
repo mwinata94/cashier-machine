@@ -5,10 +5,14 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
+    this.state = {};
+    this.props.formAttributes.queries
+      .filter(e => 'value' in e)
+      .map(e => (this.state[e.name] = e.value));
   }
 
   onChange(event) {
-    this.setState({ [event.target.name]: event.target.value });
+    this.props.onChange(event);
   }
 
   render() {
@@ -18,7 +22,7 @@ class Form extends Component {
         <div className="tile is-vertical">
           {this.props.formAttributes.queries.map((e, i) => (
             <div key={i} className="tile is-parent">
-              <div className="tile is-child label">{e.name}</div>
+              <div className="tile is-child label is-size-3">{e.name}</div>
               <div className="tile is-child">
                 <FormControl e={e} onChange={this.onChange} />
               </div>
@@ -28,7 +32,7 @@ class Form extends Component {
             {this.props.formAttributes.buttons.map((e, i) => (
               <div
                 key={i}
-                className="tile is-child button is-info"
+                className="tile is-child button is-info is-large"
                 onClick={e.onClick}
               >
                 {e.name}

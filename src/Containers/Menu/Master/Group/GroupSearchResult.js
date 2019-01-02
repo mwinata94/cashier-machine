@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
 import DisplayTable from '../../../../Generics/DisplayTable/DisplayTable';
 
-class MasterGroup extends Component {
+class MasterGroupSearchResult extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -11,9 +11,10 @@ class MasterGroup extends Component {
   componentDidMount() {
     // TODO
     // api call to fetch group tables
+    // based on params :id and/or :name
     // onClick edit
     this.setState({
-      defaultTable: {
+      resultTable: {
         columns: ['id', 'name'],
         rows: [
           {
@@ -33,8 +34,8 @@ class MasterGroup extends Component {
           <NavigationBar table="masterGroup" />
         </div>
         <div className="hero-body">
-          {this.state.defaultTable ? (
-            <DisplayTable table={this.state.defaultTable} />
+          {this.state.resultTable ? (
+            <DisplayTable table={this.state.resultTable} />
           ) : (
             <div className="container has-text-centered is-size-3">
               Loading...
@@ -46,4 +47,4 @@ class MasterGroup extends Component {
   }
 }
 
-export default MasterGroup;
+export default MasterGroupSearchResult;

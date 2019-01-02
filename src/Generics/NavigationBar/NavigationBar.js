@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavigationBarItem from './NavigationBarItem';
+import * as list from './list';
 import Time from 'react-time';
 
 import 'bulma/css/bulma.css';
@@ -9,7 +10,8 @@ class NavigationBar extends Component {
     super(props);
     this.burgerOnClick = this.burgerOnClick.bind(this);
     this.state = {
-      time: new Date()
+      time: new Date(),
+      table: list[this.props.table]
     };
   }
 
@@ -43,7 +45,7 @@ class NavigationBar extends Component {
             data-target="navbarTopMenu"
             onClick={this.burgerOnClick}
           >
-            {this.props.table.map((e, i) => (
+            {this.state.table.map((e, i) => (
               <span key={i} />
             ))}
             <span />
@@ -51,7 +53,7 @@ class NavigationBar extends Component {
         </div>
         <div id="navbarTopMenu" className="navbar-menu">
           <div className="navbar-start">
-            {this.props.table
+            {this.state.table
               .filter(e => 'left' === e.align)
               .map((e, i) => (
                 <NavigationBarItem key={i} e={e} />
@@ -59,10 +61,10 @@ class NavigationBar extends Component {
           </div>
           <div className="navbar-end">
             <a className="navbar-item is-size-6">
-              Today is{' '}
+              Today is&nbsp;
               <Time value={this.state.time} format="HH:mm:ss DD/MM/YYYY" />
             </a>
-            {this.props.table
+            {this.state.table
               .filter(e => 'right' === e.align)
               .map((e, i) => (
                 <NavigationBarItem key={i} e={e} />

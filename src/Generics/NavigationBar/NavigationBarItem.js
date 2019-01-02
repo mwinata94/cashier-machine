@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class NavigationBarItem extends Component {
   render() {
-    if (this.props.e.child.length) {
+    if (this.props.e.child) {
       return (
         <div className="navbar-item has-dropdown is-hoverable">
           <a className="navbar-link is-size-3" onClick={this.props.e.onClick}>
