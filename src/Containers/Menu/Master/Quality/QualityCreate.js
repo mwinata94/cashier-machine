@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
+import MyHero from '../../../../Generics/MyHero/MyHero';
 import Form from '../../../../Generics/Form/Form';
 
 class MasterQualityCreate extends Component {
@@ -47,24 +47,15 @@ class MasterQualityCreate extends Component {
 
   render() {
     return (
-      <div>
-        <NavigationBar table="masterQuality" />
-        <section className="hero is-fullheight">
-          <div className="hero-head is-size-2">__</div>
-          <div className="hero-body">
-            {this.state.createForm ? (
-              <Form
-                formAttributes={this.state.createForm}
-                onChange={this.onChange}
-              />
-            ) : (
-              <div className="container has-text-centered">
-                <a className="button is-success is-loading is-large">Loading</a>
-              </div>
-            )}
-          </div>
-        </section>
-      </div>
+      <MyHero
+        navTable="masterQuality"
+        heroBody={
+          <Form
+            formAttributes={this.state.createForm}
+            onChange={this.onChange}
+          />
+        }
+      />
     );
   }
 }

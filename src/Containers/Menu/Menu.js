@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
-import NavigationBar from '../../Generics/NavigationBar/NavigationBar';
+import MyHero from '../../Generics/MyHero/MyHero';
 
 class Menu extends Component {
   render() {
-    return (
-      <div>
-        <NavigationBar table="menu" />
-        <section className="hero is-fullheight">
-          <div className="hero-head is-size-2">__</div>
-        </section>
-      </div>
-    );
+    return <MyHero navTable="menu" heroBody={<div />} />;
   }
 }
 

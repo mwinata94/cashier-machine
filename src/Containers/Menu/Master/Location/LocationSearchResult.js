@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
+import MyHero from '../../../../Generics/MyHero/MyHero';
 import DisplayTable from '../../../../Generics/DisplayTable/DisplayTable';
 
 class MasterLocationSearchResult extends Component {
@@ -33,33 +33,11 @@ class MasterLocationSearchResult extends Component {
 
   render() {
     return (
-      <div>
-        <NavigationBar table="masterLocation" />
-        <section className="hero is-fullheight">
-          <div className="hero-head is-size-2">__</div>
-          <div className="hero-body">
-            {this.state.resultTable ? (
-              <DisplayTable table={this.state.resultTable} />
-            ) : (
-              <div className="container has-text-centered">
-                <a className="button is-success is-loading is-large">Loading</a>
-              </div>
-            )}
-          </div>
-          <div className="hero-foot is-size-3">__</div>
-        </section>
-        <nav
-          className="navbar is-size-4 is-primary is-fixed-bottom"
-          aria-label="main navigation"
-        >
-          <div
-            className="navbar-brand"
-            style={{ flexGrow: 1, justifyContent: 'center' }}
-          >
-            <a className="navbar-item">{this.state.footer}</a>
-          </div>
-        </nav>
-      </div>
+      <MyHero
+        navTable="masterLocation"
+        heroBody={<DisplayTable table={this.state.resultTable} />}
+        footer={this.state.footer}
+      />
     );
   }
 }

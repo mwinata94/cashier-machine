@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavigationBar from '../../../../Generics/NavigationBar/NavigationBar';
+import MyHero from '../../../../Generics/MyHero/MyHero';
 import Form from '../../../../Generics/Form/Form';
 
 class MasterGroupEdit extends Component {
@@ -52,24 +52,12 @@ class MasterGroupEdit extends Component {
 
   render() {
     return (
-      <div>
-        <NavigationBar table="masterGroup" />
-        <section className="hero is-fullheight">
-          <div className="hero-head is-size-2">__</div>
-          <div className="hero-body">
-            {this.state.editForm ? (
-              <Form
-                formAttributes={this.state.editForm}
-                onChange={this.onChange}
-              />
-            ) : (
-              <div className="container has-text-centered">
-                <a className="button is-success is-loading is-large">Loading</a>
-              </div>
-            )}
-          </div>
-        </section>
-      </div>
+      <MyHero
+        navTable="masterGroup"
+        heroBody={
+          <Form formAttributes={this.state.editForm} onChange={this.onChange} />
+        }
+      />
     );
   }
 }
