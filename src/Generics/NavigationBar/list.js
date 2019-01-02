@@ -21,6 +21,52 @@ export const masterSupplier = [
   }
 ];
 
+export const masterRetailSale = [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/retail sale/create')
+  },
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/retail sale/search')
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/retail sale')
+  },
+  {
+    name: 'back',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const masterMechanic = [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/mechanic/create')
+  },
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/mechanic/search')
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/mechanic')
+  },
+  {
+    name: 'back',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
 export const masterGroup = [
   {
     name: 'create',

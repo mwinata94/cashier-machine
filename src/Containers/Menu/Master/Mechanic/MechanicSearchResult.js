@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MyHero from '../../../../Generics/MyHero/MyHero';
 import DisplayTable from '../../../../Generics/DisplayTable/DisplayTable';
 
-class MasterMechanic extends Component {
+class MasterMechanicSearchResult extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,16 +13,17 @@ class MasterMechanic extends Component {
   componentDidMount() {
     // TODO
     // api call to fetch mechanic tables
+    // based on params :id and/or :name
     // onClick edit
     this.setState({
-      defaultTable: {
+      resultTable: {
         columns: ['id', 'name', 'starting date', 'ending date'],
         rows: [
           {
-            columns: ['QWE', 'Qwerty', '31-12-2010', '12-01-2011'],
+            columns: ['QWE', 'Qwerty', '101 Qwe 1st', '111-111-1111'],
             onClick: _ =>
               (window.location =
-                '/menu/master/mechanic/edit/id/QWE/name/Qwerty/starting date/31-12-2010/ending date/12-01-2011/description/QWE Qwerty'),
+                '/menu/master/mechanic/edit/id/QWE/name/Qwerty/starting date/101 Qwe 1st/ending date/111-111-1111/description/QWE Qwerty'),
             onMouseEnter: _ => this.setState({ footer: 'QWE Qwerty' })
           }
         ]
@@ -34,11 +35,11 @@ class MasterMechanic extends Component {
     return (
       <MyHero
         navTable="masterMechanic"
-        heroBody={<DisplayTable table={this.state.defaultTable} />}
+        heroBody={<DisplayTable table={this.state.resultTable} />}
         footer={this.state.footer}
       />
     );
   }
 }
 
-export default MasterMechanic;
+export default MasterMechanicSearchResult;
