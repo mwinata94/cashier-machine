@@ -5,7 +5,7 @@ import MenuMasterGroup from './Containers/Menu/Master/Group/route';
 import MenuMasterInventory from './Containers/Menu/Master/Inventory/route';
 import MenuMasterLocation from './Containers/Menu/Master/Location/route';
 import MenuMasterMechanic from './Containers/Menu/Master/Mechanic/route';
-import MenuMasterQuality from './Containers/Menu/Master/Quality/route';
+import MenuMasterType from './Containers/Menu/Master/Type/route';
 import MenuMasterRetailSale from './Containers/Menu/Master/RetailSale/route';
 import MenuMasterSupplier from './Containers/Menu/Master/Supplier/route';
 import MenuReportAdjust from './Containers/Menu/Report/Adjust/route';
@@ -25,7 +25,7 @@ const routes = [
   ...MenuMasterInventory,
   ...MenuMasterLocation,
   ...MenuMasterMechanic,
-  ...MenuMasterQuality,
+  ...MenuMasterType,
   ...MenuMasterRetailSale,
   ...MenuMasterSupplier,
   ...MenuReportAdjust,

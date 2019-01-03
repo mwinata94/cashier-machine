@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MyHero from '../../../../Generics/MyHero/MyHero';
 import Form from '../../../../Generics/Form/Form';
 
-class MasterQualityEdit extends Component {
+class MasterTypeEdit extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -37,7 +37,7 @@ class MasterQualityEdit extends Component {
               name: 'save',
               onClick: _ => {
                 /* TODO api edit */
-                window.location = '/menu/master/quality';
+                window.location = '/menu/master/type';
               }
             }
           ]
@@ -53,7 +53,7 @@ class MasterQualityEdit extends Component {
   render() {
     return (
       <MyHero
-        navTable="masterQuality"
+        navTable="masterType"
         heroBody={
           <Form formAttributes={this.state.editForm} onChange={this.onChange} />
         }
@@ -62,4 +62,4 @@ class MasterQualityEdit extends Component {
   }
 }
 
-export default MasterQualityEdit;
+export default MasterTypeEdit;

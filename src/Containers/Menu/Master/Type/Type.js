@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MyHero from '../../../../Generics/MyHero/MyHero';
 import DisplayTable from '../../../../Generics/DisplayTable/DisplayTable';
 
-class MasterQualitySearchResult extends Component {
+class MasterType extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,18 +12,17 @@ class MasterQualitySearchResult extends Component {
 
   componentDidMount() {
     // TODO
-    // api call to fetch quality tables
-    // based on params :id and/or :name
+    // api call to fetch type tables
     // onClick edit
     this.setState({
-      resultTable: {
+      defaultTable: {
         columns: ['id', 'name'],
         rows: [
           {
             columns: ['QWE', 'Qwerty'],
             onClick: _ =>
               (window.location =
-                '/menu/master/quality/edit/id/QWE/name/Qwerty/description/QWE Qwerty'),
+                '/menu/master/type/edit/id/QWE/name/Qwerty/description/QWE Qwerty'),
             onMouseEnter: _ => this.setState({ footer: 'QWE Qwerty' })
           }
         ]
@@ -34,12 +33,12 @@ class MasterQualitySearchResult extends Component {
   render() {
     return (
       <MyHero
-        navTable="masterQuality"
-        heroBody={<DisplayTable table={this.state.resultTable} />}
+        navTable="masterType"
+        heroBody={<DisplayTable table={this.state.defaultTable} />}
         footer={this.state.footer}
       />
     );
   }
 }
 
-export default MasterQualitySearchResult;
+export default MasterType;

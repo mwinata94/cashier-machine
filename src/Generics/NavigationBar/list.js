@@ -136,21 +136,21 @@ export const masterLocation = [
   }
 ];
 
-export const masterQuality = [
+export const masterType = [
   {
     name: 'create',
     align: 'left',
-    onClick: _ => (window.location = '/menu/master/quality/create')
+    onClick: _ => (window.location = '/menu/master/type/create')
   },
   {
     name: 'search',
     align: 'left',
-    onClick: _ => (window.location = '/menu/master/quality/search')
+    onClick: _ => (window.location = '/menu/master/type/search')
   },
   {
     name: 'default',
     align: 'left',
-    onClick: _ => (window.location = '/menu/master/quality')
+    onClick: _ => (window.location = '/menu/master/type')
   },
   {
     name: 'back',
@@ -208,9 +208,9 @@ export const menu = [
         }
       },
       {
-        name: 'quality',
+        name: 'type',
         onClick: event => {
-          window.location = '/menu/master/quality';
+          window.location = '/menu/master/type';
         }
       }
     ]

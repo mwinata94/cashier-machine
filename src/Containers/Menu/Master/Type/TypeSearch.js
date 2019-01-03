@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import MyHero from '../../../../Generics/MyHero/MyHero';
 import Form from '../../../../Generics/Form/Form';
 
-class MasterQualityCreate extends Component {
+class MasterTypeSearch extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
-    this.state = {};
+    this.state = {
+      id: '',
+      name: '',
+      description: ''
+    };
   }
 
   componentDidMount() {
-    if (!this.state.createForm) {
+    if (!this.state.searchForm) {
       this.setState({
-        createForm: {
+        searchForm: {
           queries: [
             {
               name: 'id',
@@ -29,10 +33,18 @@ class MasterQualityCreate extends Component {
           ],
           buttons: [
             {
-              name: 'create',
+              name: 'search',
               onClick: _ => {
-                /* TODO api create */
-                window.location = '/menu/master/quality';
+                /* TODO
+                    api search 
+                */
+                window.location = `/menu/master/type/search${
+                  '' === this.state.id ? '' : `/id/${this.state.id}`
+                }${'' === this.state.name ? '' : `/name/${this.state.name}`}${
+                  '' === this.state.description
+                    ? ''
+                    : `/description/${this.state.description}`
+                }`;
               }
             }
           ]
@@ -48,10 +60,10 @@ class MasterQualityCreate extends Component {
   render() {
     return (
       <MyHero
-        navTable="masterQuality"
+        navTable="masterType"
         heroBody={
           <Form
-            formAttributes={this.state.createForm}
+            formAttributes={this.state.searchForm}
             onChange={this.onChange}
           />
         }
@@ -60,4 +72,4 @@ class MasterQualityCreate extends Component {
   }
 }
 
-export default MasterQualityCreate;
+export default MasterTypeSearch;
