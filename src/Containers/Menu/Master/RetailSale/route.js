@@ -73,42 +73,7 @@ const MasterRetailSaleRoute = [
     component: MasterRetailSaleSearchResult
   },
   {
-    path: '/menu/master/retail sale/search/name/:name',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path: '/menu/master/retail sale/search/starting date/:startingDate',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path: '/menu/master/retail sale/search/ending date/endingDate',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path: '/menu/master/retail sale/search/description/:description',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
     path: '/menu/master/retail sale/search/id/:id/name/:name',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path: '/menu/master/retail sale/search/id/:id/starting date/:startingDate',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path: '/menu/master/retail sale/search/id/:id/ending date/:endingDate',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path: '/menu/master/retail sale/search/id/:id/description/:description',
     exact: true,
     component: MasterRetailSaleSearchResult
   },
@@ -120,25 +85,7 @@ const MasterRetailSaleRoute = [
   },
   {
     path:
-      '/menu/master/retail sale/search/id/:id/name/:name/ending date/:endingDate',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path:
-      '/menu/master/retail sale/search/id/:id/name/:name/description/:description',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path:
       '/menu/master/retail sale/search/id/:id/name/:name/starting date/:startingDate/ending date/:endingDate',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path:
-      '/menu/master/retail sale/search/id/:id/name/:name/starting date/:startingDate/description/:description',
     exact: true,
     component: MasterRetailSaleSearchResult
   },
@@ -150,13 +97,36 @@ const MasterRetailSaleRoute = [
   },
   {
     path:
-      '/menu/master/retail sale/search/id/:id/starting date/:startingDate/ending date/:endingDate',
+      '/menu/master/retail sale/search/id/:id/name/:name/starting date/:startingDate/description/:description',
     exact: true,
     component: MasterRetailSaleSearchResult
   },
   {
     path:
-      '/menu/master/retail sale/search/id/:id/starting date/:startingDate/description/:description',
+      '/menu/master/retail sale/search/id/:id/name/:name/ending date/:endingDate',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path:
+      '/menu/master/retail sale/search/id/:id/name/:name/ending date/:endingDate/description/:description',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path:
+      '/menu/master/retail sale/search/id/:id/name/:name/description/:description',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path: '/menu/master/retail sale/search/id/:id/starting date/:startingDate',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path:
+      '/menu/master/retail sale/search/id/:id/starting date/:startingDate/ending date/:endingDate',
     exact: true,
     component: MasterRetailSaleSearchResult
   },
@@ -168,23 +138,34 @@ const MasterRetailSaleRoute = [
   },
   {
     path:
+      '/menu/master/retail sale/search/id/:id/starting date/:startingDate/description/:description',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path: '/menu/master/retail sale/search/id/:id/ending date/:endingDate',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path:
       '/menu/master/retail sale/search/id/:id/ending date/:endingDate/description/:description',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path: '/menu/master/retail sale/search/id/:id/description/:description',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path: '/menu/master/retail sale/search/name/:name',
     exact: true,
     component: MasterRetailSaleSearchResult
   },
   {
     path:
       '/menu/master/retail sale/search/name/:name/starting date/:startingDate',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path: '/menu/master/retail sale/search/name/:name/ending date/:endingDate',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path: '/menu/master/retail sale/search/name/:name/description/:description',
     exact: true,
     component: MasterRetailSaleSearchResult
   },
@@ -196,13 +177,34 @@ const MasterRetailSaleRoute = [
   },
   {
     path:
-      '/menu/master/retail sale/search/name/:name/starting date/:startingDate/description/:description',
+      '/menu/master/retail sale/search/name/:name/starting date/:startingDate/ending date/:endingDate/description/:description',
     exact: true,
     component: MasterRetailSaleSearchResult
   },
   {
     path:
-      '/menu/master/retail sale/search/name/:name/starting date/:startingDate/ending date/:endingDate/description/:description',
+      '/menu/master/retail sale/search/name/:name/starting date/:startingDate/description/:description',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path: '/menu/master/retail sale/search/name/:name/ending date/:endingDate',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path:
+      '/menu/master/retail sale/search/name/:name/ending date/:endingDate/description/:description',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path: '/menu/master/retail sale/search/name/:name/description/:description',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path: '/menu/master/retail sale/search/starting date/:startingDate',
     exact: true,
     component: MasterRetailSaleSearchResult
   },
@@ -214,19 +216,29 @@ const MasterRetailSaleRoute = [
   },
   {
     path:
-      '/menu/master/retail sale/search/starting date/:startingDate/description/:description',
-    exact: true,
-    component: MasterRetailSaleSearchResult
-  },
-  {
-    path:
       '/menu/master/retail sale/search/starting date/:startingDate/ending date/:endingDate/description/:description',
     exact: true,
     component: MasterRetailSaleSearchResult
   },
   {
     path:
+      '/menu/master/retail sale/search/starting date/:startingDate/description/:description',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path: '/menu/master/retail sale/search/ending date/:endingDate',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path:
       '/menu/master/retail sale/search/ending date/:endingDate/description/:description',
+    exact: true,
+    component: MasterRetailSaleSearchResult
+  },
+  {
+    path: '/menu/master/retail sale/search/description/:description',
     exact: true,
     component: MasterRetailSaleSearchResult
   }
