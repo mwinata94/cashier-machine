@@ -196,12 +196,6 @@ export const menu = [
         name: 'divider'
       },
       {
-        name: 'group',
-        onClick: event => {
-          window.location = '/menu/master/group';
-        }
-      },
-      {
         name: 'location',
         onClick: event => {
           window.location = '/menu/master/location';
@@ -211,6 +205,12 @@ export const menu = [
         name: 'type',
         onClick: event => {
           window.location = '/menu/master/type';
+        }
+      },
+      {
+        name: 'group',
+        onClick: event => {
+          window.location = '/menu/master/group';
         }
       }
     ]
