@@ -1,3 +1,26 @@
+export const masterInventory = [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/inventory/create')
+  },
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/inventory/search')
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/inventory')
+  },
+  {
+    name: 'back',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
 export const masterSupplier = [
   {
     name: 'create',

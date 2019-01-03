@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MyHero from '../../../../Generics/MyHero/MyHero';
 import DisplayTable from '../../../../Generics/DisplayTable/DisplayTable';
 
-class MasterInventory extends Component {
+class MasterInventorySearchResult extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,9 +13,10 @@ class MasterInventory extends Component {
   componentDidMount() {
     // TODO
     // api call to fetch inventory tables
+    // based on params :id and/or :name
     // onClick edit
     this.setState({
-      defaultTable: {
+      resultTable: {
         columns: [
           'id',
           'name',
@@ -38,7 +39,7 @@ class MasterInventory extends Component {
             ],
             onClick: _ =>
               (window.location =
-                '/menu/master/inventory/edit/id/1S7-F1311-200/name/Qwerty/quantity/0/sale price/30,000/location/F4/type/QWE/group/E4/description/QWE Qwerty'),
+                '/menu/master/inventory/edit/id/1S7-F1311-200/name/Qwerty/quantity/0/sale price/30,000/location/F4/type/QWE/group/E4description/QWE Qwerty'),
             onMouseEnter: _ => this.setState({ footer: 'QWE Qwerty' })
           }
         ]
@@ -50,11 +51,11 @@ class MasterInventory extends Component {
     return (
       <MyHero
         navTable="masterInventory"
-        heroBody={<DisplayTable table={this.state.defaultTable} />}
+        heroBody={<DisplayTable table={this.state.resultTable} />}
         footer={this.state.footer}
       />
     );
   }
 }
 
-export default MasterInventory;
+export default MasterInventorySearchResult;
