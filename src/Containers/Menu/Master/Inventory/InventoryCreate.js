@@ -37,12 +37,12 @@ class MasterInventoryCreate extends Component {
             {
               name: 'location',
               control: 'select',
-              items: []
+              items: ['']
             },
             {
               name: 'type',
               control: 'select',
-              items: []
+              items: ['']
             },
             {
               name: 'group',

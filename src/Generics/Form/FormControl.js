@@ -38,12 +38,12 @@ class FormControl extends Component {
       ),
       label: <div className="label is-large"> {this.state.value}</div>,
       select: (
-        <div class="select is-info is-large">
+        <div class="select is-info is-large is-fullwidth">
           <select>
             {this.props.e.items &&
               this.props.e.items.map((e, i) => (
                 <option key={i} value={e}>
-                  e
+                  {e}
                 </option>
               ))}
           </select>
