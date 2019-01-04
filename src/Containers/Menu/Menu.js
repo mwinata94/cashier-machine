@@ -16,9 +16,7 @@ class Menu extends Component {
         columns: ['printer name', 'status'],
         rows: [
           {
-            columns: ['Printer', 'not connected'],
-            onClick: _ => {},
-            onMouseEnter: _ => {}
+            columns: ['Printer', 'not connected']
           }
         ]
       }
@@ -30,6 +28,7 @@ class Menu extends Component {
       <MyHero
         navTable="menu"
         heroBody={<DisplayTable table={this.state.defaultTable} />}
+        footer={'test'}
       />
     );
   }
