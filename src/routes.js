@@ -11,10 +11,15 @@ import MenuMasterSupplier from './Containers/Menu/Master/Supplier/route';
 import MenuReportAdjust from './Containers/Menu/Report/Adjust/route';
 import MenuReportInventory from './Containers/Menu/Report/Inventory/route';
 import MenuReportPurchase from './Containers/Menu/Report/Purchase/route';
+import MenuReportReturnPurchase from './Containers/Menu/Report/ReturnPurchase/route';
 import MenuReportSale from './Containers/Menu/Report/Sale/route';
+import MenuReportService from './Containers/Menu/Report/Service/route';
+import MenuReportSupplier from './Containers/Menu/Report/Supplier/route';
 import MenuTransactionAdjust from './Containers/Menu/Transaction/Adjust/route';
 import MenuTransactionPurchase from './Containers/Menu/Transaction/Purchase/route';
+import MenuTransactionReturnPurchase from './Containers/Menu/Transaction/ReturnPurchase/route';
 import MenuTransactionSale from './Containers/Menu/Transaction/Sale/route';
+import MenuTransactionService from './Containers/Menu/Transaction/Service/route';
 import MenuWishList from './Containers/Menu/WishList/route';
 
 const routes = [
@@ -31,10 +36,15 @@ const routes = [
   ...MenuReportAdjust,
   ...MenuReportInventory,
   ...MenuReportPurchase,
+  ...MenuReportReturnPurchase,
   ...MenuReportSale,
+  ...MenuReportService,
+  ...MenuReportSupplier,
   ...MenuTransactionAdjust,
   ...MenuTransactionPurchase,
+  ...MenuTransactionReturnPurchase,
   ...MenuTransactionSale,
+  ...MenuTransactionService,
   ...MenuWishList
 ];
 

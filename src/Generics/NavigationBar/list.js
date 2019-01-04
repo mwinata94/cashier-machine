@@ -233,9 +233,21 @@ export const menu = [
         }
       },
       {
+        name: 'return purchase',
+        onClick: event => {
+          window.location = '/menu/transaction/return purchase';
+        }
+      },
+      {
         name: 'sale',
         onClick: event => {
           window.location = '/menu/transaction/sale';
+        }
+      },
+      {
+        name: 'service',
+        onClick: event => {
+          window.location = '/menu/transaction/service';
         }
       }
     ]
@@ -264,9 +276,27 @@ export const menu = [
         }
       },
       {
+        name: 'return purchase',
+        onClick: event => {
+          window.location = '/menu/report/return purchase';
+        }
+      },
+      {
         name: 'sale',
         onClick: event => {
           window.location = '/menu/report/sale';
+        }
+      },
+      {
+        name: 'service',
+        onClick: event => {
+          window.location = '/menu/report/service';
+        }
+      },
+      {
+        name: 'supplier',
+        onClick: event => {
+          window.location = '/menu/report/supplier';
         }
       }
     ]
