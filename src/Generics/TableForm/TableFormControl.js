@@ -48,7 +48,8 @@ class TableFormControl extends Component {
               ))}
           </select>
         </div>
-      )
+      ),
+      empty: <div />
     };
     return type[this.props.e.control];
   }
