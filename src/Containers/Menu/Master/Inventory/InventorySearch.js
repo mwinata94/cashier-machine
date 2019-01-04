@@ -37,17 +37,17 @@ class MasterInventorySearch extends Component {
             {
               name: 'location',
               control: 'select',
-              items: []
+              items: ['']
             },
             {
               name: 'type',
               control: 'select',
-              items: []
+              items: ['']
             },
             {
               name: 'group',
               control: 'select',
-              items: []
+              items: ['']
             },
             {
               name: 'description',
