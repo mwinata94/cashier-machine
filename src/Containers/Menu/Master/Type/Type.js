@@ -35,6 +35,7 @@ class MasterType extends Component {
       <MyHero
         navTable="masterType"
         heroBody={<DisplayTable table={this.state.defaultTable} />}
+        alignTop={true}
         footer={this.state.footer}
       />
     );

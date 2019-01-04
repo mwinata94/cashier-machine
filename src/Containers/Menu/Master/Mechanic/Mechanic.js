@@ -35,6 +35,7 @@ class MasterMechanic extends Component {
       <MyHero
         navTable="masterMechanic"
         heroBody={<DisplayTable table={this.state.defaultTable} />}
+        alignTop={true}
         footer={this.state.footer}
       />
     );

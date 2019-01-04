@@ -8,7 +8,11 @@ class MyHero extends Component {
         <NavigationBar table={this.props.navTable} />
         <section className="hero is-fullheight">
           <div className="hero-head is-size-2">__</div>
-          <div className="hero-body">{this.props.heroBody}</div>
+          {this.props.alignTop ? (
+            this.props.heroBody
+          ) : (
+            <div className="hero-body">{this.props.heroBody}</div>
+          )}
           {this.props.footer && <div className="hero-foot is-size-3">__</div>}
         </section>
         {this.props.footer && (

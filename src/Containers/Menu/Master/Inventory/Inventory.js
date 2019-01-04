@@ -51,6 +51,7 @@ class MasterInventory extends Component {
       <MyHero
         navTable="masterInventory"
         heroBody={<DisplayTable table={this.state.defaultTable} />}
+        alignTop={true}
         footer={this.state.footer}
       />
     );

@@ -36,6 +36,7 @@ class MasterLocationSearchResult extends Component {
       <MyHero
         navTable="masterLocation"
         heroBody={<DisplayTable table={this.state.resultTable} />}
+        alignTop={true}
         footer={this.state.footer}
       />
     );

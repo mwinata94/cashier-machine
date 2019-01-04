@@ -35,6 +35,7 @@ class MasterGroup extends Component {
       <MyHero
         navTable="masterGroup"
         heroBody={<DisplayTable table={this.state.defaultTable} />}
+        alignTop={true}
         footer={this.state.footer}
       />
     );

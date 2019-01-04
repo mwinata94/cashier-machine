@@ -35,6 +35,7 @@ class MasterRetailSale extends Component {
       <MyHero
         navTable="masterRetailSale"
         heroBody={<DisplayTable table={this.state.defaultTable} />}
+        alignTop={true}
         footer={this.state.footer}
       />
     );

@@ -35,6 +35,7 @@ class MasterLocation extends Component {
       <MyHero
         navTable="masterLocation"
         heroBody={<DisplayTable table={this.state.defaultTable} />}
+        alignTop={true}
         footer={this.state.footer}
       />
     );
