@@ -11,7 +11,7 @@ class NavigationBar extends Component {
     this.burgerOnClick = this.burgerOnClick.bind(this);
     this.state = {
       time: new Date(),
-      table: list[this.props.table]
+      table: list[this.props.table](this.props.tableParams)
     };
   }
 

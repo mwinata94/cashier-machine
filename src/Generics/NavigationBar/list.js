@@ -1,4 +1,4 @@
-export const masterInventory = [
+export const masterInventory = _ => [
   {
     name: 'create',
     align: 'left',
@@ -21,7 +21,7 @@ export const masterInventory = [
   }
 ];
 
-export const masterSupplier = [
+export const masterSupplier = _ => [
   {
     name: 'create',
     align: 'left',
@@ -44,7 +44,7 @@ export const masterSupplier = [
   }
 ];
 
-export const masterRetailSale = [
+export const masterRetailSale = _ => [
   {
     name: 'create',
     align: 'left',
@@ -67,7 +67,7 @@ export const masterRetailSale = [
   }
 ];
 
-export const masterMechanic = [
+export const masterMechanic = _ => [
   {
     name: 'create',
     align: 'left',
@@ -90,7 +90,7 @@ export const masterMechanic = [
   }
 ];
 
-export const masterGroup = [
+export const masterGroup = _ => [
   {
     name: 'create',
     align: 'left',
@@ -113,7 +113,7 @@ export const masterGroup = [
   }
 ];
 
-export const masterLocation = [
+export const masterLocation = _ => [
   {
     name: 'create',
     align: 'left',
@@ -136,7 +136,7 @@ export const masterLocation = [
   }
 ];
 
-export const masterType = [
+export const masterType = _ => [
   {
     name: 'create',
     align: 'left',
@@ -159,7 +159,7 @@ export const masterType = [
   }
 ];
 
-export const menu = [
+export const menu = _ => [
   {
     name: 'master',
     align: 'left',
