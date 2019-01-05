@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MyHero from '../../../../Generics/MyHero/MyHero';
 import Form from '../../../../Generics/Form/Form';
 
-class MasterTypeEdit extends Component {
+class TransactionAdjustUpdateDescription extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
@@ -15,21 +15,9 @@ class MasterTypeEdit extends Component {
         editForm: {
           queries: [
             {
-              name: 'id',
-              control: 'input',
-              value: this.props.match.params.id
-            },
-            {
-              name: 'name',
-              control: 'input',
-              value: this.props.match.params.name
-            },
-            {
               name: 'description',
               control: 'input',
-              value: this.props.match.params.description
-                ? this.props.match.params.description
-                : ''
+              value: ''
             }
           ],
           buttons: [
@@ -37,7 +25,9 @@ class MasterTypeEdit extends Component {
               name: 'save',
               onClick: _ => {
                 /* TODO api edit */
-                window.location = '/menu/master/type';
+                window.location = `/menu/transaction/adjust/${
+                  this.props.match.params.id
+                }`;
               }
             }
           ]
@@ -53,13 +43,15 @@ class MasterTypeEdit extends Component {
   render() {
     return (
       <MyHero
-        navTable="masterType"
+        navTable="transactionAdjustUpdate"
+        navTableParams={this.props.match.params.id}
         heroBody={
           <Form formAttributes={this.state.editForm} onChange={this.onChange} />
         }
+        alignTop={true}
       />
     );
   }
 }
 
-export default MasterTypeEdit;
+export default TransactionAdjustUpdateDescription;

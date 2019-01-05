@@ -20,12 +20,14 @@ class TableForm extends Component {
   render() {
     if (this.props.tableFormAttributes) {
       return (
-        <div className="tile is-ancestor is-vertical">
+        <div className="tile is-ancestor is-vertical box">
           {this.props.tableFormAttributes.queries.map((e, i) => (
-            <div className="tile is-parent">
+            <div key={i} className="tile is-parent">
               {e.map((e, j) => (
-                <div key={`${i}${j}`} className="tile is-parent">
-                  <div className="tile is-child label is-size-3">{e.name}</div>
+                <div key={j} className="tile">
+                  <div className="tile is-child label has-text-centered">
+                    {e.name}
+                  </div>
                   <div className="tile is-child">
                     <TableFormControl e={e} onChange={this.onChange} />
                   </div>

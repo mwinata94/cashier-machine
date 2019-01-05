@@ -5,12 +5,17 @@ class DisplayTable extends Component {
     if (this.props.table) {
       if (this.props.table.rows.length) {
         return (
-          <div className="tile table-container">
+          <div
+            className="table-container"
+            style={{ flex: '1 1 0', width: '100%' }}
+          >
             <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
               <thead>
                 <tr>
                   {this.props.table.columns.map((e, i) => (
-                    <th key={i}>{e}</th>
+                    <th key={i} className="has-text-centered">
+                      {e}
+                    </th>
                   ))}
                 </tr>
               </thead>

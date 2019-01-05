@@ -15,7 +15,7 @@ export const masterInventory = _ => [
     onClick: _ => (window.location = '/menu/master/inventory')
   },
   {
-    name: 'back',
+    name: 'menu',
     align: 'right',
     onClick: event => (window.location = '/menu')
   }
@@ -38,7 +38,7 @@ export const masterSupplier = _ => [
     onClick: _ => (window.location = '/menu/master/supplier')
   },
   {
-    name: 'back',
+    name: 'menu',
     align: 'right',
     onClick: event => (window.location = '/menu')
   }
@@ -61,7 +61,7 @@ export const masterRetailSale = _ => [
     onClick: _ => (window.location = '/menu/master/retail sale')
   },
   {
-    name: 'back',
+    name: 'menu',
     align: 'right',
     onClick: event => (window.location = '/menu')
   }
@@ -84,7 +84,7 @@ export const masterMechanic = _ => [
     onClick: _ => (window.location = '/menu/master/mechanic')
   },
   {
-    name: 'back',
+    name: 'menu',
     align: 'right',
     onClick: event => (window.location = '/menu')
   }
@@ -107,7 +107,7 @@ export const masterGroup = _ => [
     onClick: _ => (window.location = '/menu/master/group')
   },
   {
-    name: 'back',
+    name: 'menu',
     align: 'right',
     onClick: event => (window.location = '/menu')
   }
@@ -130,7 +130,7 @@ export const masterLocation = _ => [
     onClick: _ => (window.location = '/menu/master/location')
   },
   {
-    name: 'back',
+    name: 'menu',
     align: 'right',
     onClick: event => (window.location = '/menu')
   }
@@ -153,7 +153,55 @@ export const masterType = _ => [
     onClick: _ => (window.location = '/menu/master/type')
   },
   {
-    name: 'back',
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const transactionAdjust = _ => [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => {
+      /* todo api */
+    }
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const transactionAdjustUpdate = id => [
+  {
+    name: 'add',
+    align: 'left',
+    onClick: _ => {
+      /* todo api */
+    }
+  },
+  {
+    name: 'description',
+    align: 'left',
+    onClick: _ =>
+      (window.location = `/menu/transaction/adjust/${id}/description`)
+  },
+  {
+    name: 'finish',
+    align: 'left',
+    onClick: _ => {
+      /* todo api */
+    }
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/transaction/adjust')
+  },
+  {
+    name: 'menu',
     align: 'right',
     onClick: event => (window.location = '/menu')
   }
@@ -183,7 +231,7 @@ export const menu = _ => [
       {
         name: 'retail sale',
         onClick: event => {
-          window.location = '/menu/master/retailsale';
+          window.location = '/menu/master/retail sale';
         }
       },
       {

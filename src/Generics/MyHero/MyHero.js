@@ -5,15 +5,20 @@ class MyHero extends Component {
   render() {
     return (
       <div>
-        <NavigationBar table={this.props.navTable} />
+        <NavigationBar
+          table={this.props.navTable}
+          tableParams={this.props.navTableParams}
+        />
         <section className="hero is-fullheight">
-          <div className="hero-head is-size-2">__</div>
+          <div className="hero-head is-size-1">&nbsp;</div>
           {this.props.alignTop ? (
             this.props.heroBody
           ) : (
             <div className="hero-body">{this.props.heroBody}</div>
           )}
-          {this.props.footer && <div className="hero-foot is-size-3">__</div>}
+          {this.props.footer && (
+            <div className="hero-foot is-size-3">&nbsp;</div>
+          )}
         </section>
         {this.props.footer && (
           <nav

@@ -5,7 +5,9 @@ import DisplayTable from '../../Generics/DisplayTable/DisplayTable';
 class Menu extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      footer: ' '
+    };
   }
 
   componentDidMount() {
@@ -16,7 +18,9 @@ class Menu extends Component {
         columns: ['printer name', 'status'],
         rows: [
           {
-            columns: ['Printer', 'not connected']
+            columns: ['Printer', 'not connected'],
+            onMouseEnter: _ =>
+              this.setState({ footer: 'Printer location: not available' })
           }
         ]
       }
@@ -28,7 +32,7 @@ class Menu extends Component {
       <MyHero
         navTable="menu"
         heroBody={<DisplayTable table={this.state.defaultTable} />}
-        footer={'test'}
+        footer={this.state.footer}
       />
     );
   }

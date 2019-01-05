@@ -10,6 +10,14 @@ class FormControl extends Component {
     };
   }
 
+  componentDidMount() {
+    if ('select' === this.props.e.control) {
+      // api
+      //   .fetchSelect(this.props.e.name)
+      //   .then(data => this.setState({ items: data }));
+    }
+  }
+
   onInputChange(event) {
     this.setState({ value: event.target.value });
     this.props.onChange(event);
@@ -40,8 +48,8 @@ class FormControl extends Component {
       select: (
         <div class="select is-info is-large is-fullwidth">
           <select>
-            {this.props.e.items &&
-              this.props.e.items.map((e, i) => (
+            {this.state.items &&
+              this.state.items.map((e, i) => (
                 <option key={i} value={e}>
                   {e}
                 </option>

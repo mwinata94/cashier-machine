@@ -10,6 +10,14 @@ class TableFormControl extends Component {
     };
   }
 
+  componentDidMount() {
+    if ('select' === this.props.e.control) {
+      // api
+      //   .fetchSelect(this.props.e.name)
+      //   .then(data => this.setState({ items: data }));
+    }
+  }
+
   onInputChange(event) {
     this.setState({ value: event.target.value });
     this.props.onChange(event);
@@ -28,7 +36,7 @@ class TableFormControl extends Component {
     const type = {
       input: (
         <input
-          className="input is-large"
+          className="input"
           name={this.props.e.name}
           onChange={this.onInputChange}
           type={this.props.e.name}
@@ -36,16 +44,22 @@ class TableFormControl extends Component {
           value={this.state.value}
         />
       ),
-      label: <div className="label is-large"> {this.state.value}</div>,
+      label: <div className="label"> {this.state.value}</div>,
       select: (
-        <div class="select is-info is-large is-fullwidth">
+        <div class="select is-info is-fullwidth">
           <select>
-            {this.props.e.items &&
-              this.props.e.items.map((e, i) => (
-                <option key={i} value={e}>
-                  {e}
-                </option>
-              ))}
+            {this.state.items &&
+              this.state.items.map((e, i) =>
+                this.state.value === e ? (
+                  <option key={i} value={e} selected>
+                    {e}
+                  </option>
+                ) : (
+                  <option key={i} value={e}>
+                    {e}
+                  </option>
+                )
+              )}
           </select>
         </div>
       ),

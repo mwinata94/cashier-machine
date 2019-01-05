@@ -19,8 +19,9 @@ class TransactionAdjust extends Component {
         columns: ['id', 'date'],
         rows: [
           {
-            columns: ['QWE', 'Qwerty'],
-            onClick: _ => (window.location = '/menu/transaction/adjust/QWE'),
+            columns: ['IAD190130001', '20190130'],
+            onClick: _ =>
+              (window.location = '/menu/transaction/adjust/IAD190130001'),
             onMouseEnter: _ => this.setState({ footer: 'QWE Qwerty' })
           }
         ]

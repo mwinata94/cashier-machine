@@ -1,8 +1,7 @@
 import MasterLocation from './Location';
 import MasterLocationCreate from './LocationCreate';
-import MasterLocationEdit from './LocationEdit';
+import MasterLocationUpdate from './LocationUpdate';
 import MasterLocationSearch from './LocationSearch';
-import MasterLocationSearchResult from './LocationSearchResult';
 
 const MasterLocationRoute = [
   {
@@ -16,15 +15,9 @@ const MasterLocationRoute = [
     component: MasterLocationCreate
   },
   {
-    path: '/menu/master/location/edit/id/:id/name/:name',
+    path: '/menu/master/location/update/:id',
     exact: true,
-    component: MasterLocationEdit
-  },
-  {
-    path:
-      '/menu/master/location/edit/id/:id/name/:name/description/:description',
-    exact: true,
-    component: MasterLocationEdit
+    component: MasterLocationUpdate
   },
   {
     path: '/menu/master/location/search',
@@ -34,38 +27,38 @@ const MasterLocationRoute = [
   {
     path: '/menu/master/location/search/id/:id',
     exact: true,
-    component: MasterLocationSearchResult
+    component: MasterLocation
   },
   {
     path: '/menu/master/location/search/name/:name',
     exact: true,
-    component: MasterLocationSearchResult
+    component: MasterLocation
   },
   {
     path: '/menu/master/location/search/description/:description',
     exact: true,
-    component: MasterLocationSearchResult
+    component: MasterLocation
   },
   {
     path: '/menu/master/location/search/id/:id/name/:name',
     exact: true,
-    component: MasterLocationSearchResult
+    component: MasterLocation
   },
   {
     path: '/menu/master/location/search/id/:id/description/:description',
     exact: true,
-    component: MasterLocationSearchResult
+    component: MasterLocation
   },
   {
     path: '/menu/master/location/search/name/:name/description/:description',
     exact: true,
-    component: MasterLocationSearchResult
+    component: MasterLocation
   },
   {
     path:
       '/menu/master/location/search/id/:id/name/:name/description/:description',
     exact: true,
-    component: MasterLocationSearchResult
+    component: MasterLocation
   }
 ];
 

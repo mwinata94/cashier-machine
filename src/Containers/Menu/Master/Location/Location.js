@@ -1,42 +1,14 @@
 import React, { Component } from 'react';
-import MyHero from '../../../../Generics/MyHero/MyHero';
-import DisplayTable from '../../../../Generics/DisplayTable/DisplayTable';
+import IndexPage from '../../../../Generics/Page/Index';
 
 class MasterLocation extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      footer: ' '
-    };
-  }
-
-  componentDidMount() {
-    // TODO
-    // api call to fetch location tables
-    // onClick edit
-    this.setState({
-      defaultTable: {
-        columns: ['id', 'name'],
-        rows: [
-          {
-            columns: ['QWE', 'Qwerty'],
-            onClick: _ =>
-              (window.location =
-                '/menu/master/location/edit/id/QWE/name/Qwerty/description/QWE Qwerty'),
-            onMouseEnter: _ => this.setState({ footer: 'QWE Qwerty' })
-          }
-        ]
-      }
-    });
-  }
-
   render() {
     return (
-      <MyHero
+      <IndexPage
         navTable="masterLocation"
-        heroBody={<DisplayTable table={this.state.defaultTable} />}
+        onClickLocation="/menu/master/location/update"
+        onClickLocationAppendId={true}
         alignTop={true}
-        footer={this.state.footer}
       />
     );
   }

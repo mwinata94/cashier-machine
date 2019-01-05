@@ -1,8 +1,7 @@
 import MasterGroup from './Group';
 import MasterGroupCreate from './GroupCreate';
-import MasterGroupEdit from './GroupEdit';
+import MasterGroupUpdate from './GroupUpdate';
 import MasterGroupSearch from './GroupSearch';
-import MasterGroupSearchResult from './GroupSearchResult';
 
 const MasterGroupRoute = [
   {
@@ -16,14 +15,9 @@ const MasterGroupRoute = [
     component: MasterGroupCreate
   },
   {
-    path: '/menu/master/group/edit/id/:id/name/:name',
+    path: '/menu/master/group/update/:id',
     exact: true,
-    component: MasterGroupEdit
-  },
-  {
-    path: '/menu/master/group/edit/id/:id/name/:name/description/:description',
-    exact: true,
-    component: MasterGroupEdit
+    component: MasterGroupUpdate
   },
   {
     path: '/menu/master/group/search',
@@ -33,38 +27,38 @@ const MasterGroupRoute = [
   {
     path: '/menu/master/group/search/id/:id',
     exact: true,
-    component: MasterGroupSearchResult
+    component: MasterGroup
   },
   {
     path: '/menu/master/group/search/name/:name',
     exact: true,
-    component: MasterGroupSearchResult
+    component: MasterGroup
   },
   {
     path: '/menu/master/group/search/description/:description',
     exact: true,
-    component: MasterGroupSearchResult
+    component: MasterGroup
   },
   {
     path: '/menu/master/group/search/id/:id/name/:name',
     exact: true,
-    component: MasterGroupSearchResult
+    component: MasterGroup
   },
   {
     path: '/menu/master/group/search/id/:id/description/:description',
     exact: true,
-    component: MasterGroupSearchResult
+    component: MasterGroup
   },
   {
     path: '/menu/master/group/search/name/:name/description/:description',
     exact: true,
-    component: MasterGroupSearchResult
+    component: MasterGroup
   },
   {
     path:
       '/menu/master/group/search/id/:id/name/:name/description/:description',
     exact: true,
-    component: MasterGroupSearchResult
+    component: MasterGroup
   }
 ];
 
