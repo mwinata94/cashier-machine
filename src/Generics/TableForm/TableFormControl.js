@@ -46,7 +46,7 @@ class TableFormControl extends Component {
       ),
       label: <div className="label"> {this.state.value}</div>,
       select: (
-        <div class="select is-info is-fullwidth">
+        <div className="select is-info is-fullwidth">
           <select>
             {this.state.items &&
               this.state.items.map((e, i) =>

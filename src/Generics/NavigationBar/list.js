@@ -178,9 +178,7 @@ export const transactionAdjustUpdate = id => [
   {
     name: 'add',
     align: 'left',
-    onClick: _ => {
-      /* todo api */
-    }
+    onClick: _ => (window.location = `/menu/transaction/adjust/${id}/search`)
   },
   {
     name: 'description',
@@ -192,7 +190,8 @@ export const transactionAdjustUpdate = id => [
     name: 'finish',
     align: 'left',
     onClick: _ => {
-      /* todo api */
+      /* todo api print */
+      window.location = `/menu/transaction/adjust`;
     }
   },
   {

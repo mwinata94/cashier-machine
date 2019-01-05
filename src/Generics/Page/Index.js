@@ -32,9 +32,7 @@ class Index extends Component {
             columns: dataColumn,
             onClick: _ => {
               if (this.props.onClickAPI) {
-                this.props
-                  .onClickAPI({ id: dataColumn[0] })
-                  .then(_ => this.windowLocation(dataColumn[0]));
+                this.props.onClickAPI(dataColumn[0]).then(this.windowLocation);
               } else {
                 this.windowLocation(dataColumn[0]);
               }
