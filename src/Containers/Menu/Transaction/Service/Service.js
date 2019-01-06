@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
+import IndexPage from '../../../../Generics/Page/Index';
 
 class TransactionService extends Component {
   render() {
-    return <h1>TransactionService</h1>;
+    return (
+      <IndexPage
+        navTable="transactionService"
+        onClickLocation="/menu/transaction/service"
+        onClickLocationAppendId={true}
+        alignTop={true}
+      />
+    );
   }
 }
 

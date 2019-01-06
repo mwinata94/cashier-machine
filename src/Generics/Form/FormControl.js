@@ -56,6 +56,16 @@ class FormControl extends Component {
               ))}
           </select>
         </div>
+      ),
+      textarea: (
+        <textarea
+          class="textarea"
+          placeholder={this.props.e.name}
+          rows={this.props.e.rows}
+          cols={this.props.e.cols}
+          onChange={this.onInputChange}
+          value={this.state.value}
+        />
       )
     };
     return type[this.props.e.control];

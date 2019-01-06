@@ -206,6 +206,200 @@ export const transactionAdjustUpdate = id => [
   }
 ];
 
+export const transactionPurchase = _ => [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => {
+      /* todo api */
+    }
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const transactionPurchaseUpdate = id => [
+  {
+    name: 'add',
+    align: 'left',
+    onClick: _ => (window.location = `/menu/transaction/purchase/${id}/search`)
+  },
+  {
+    name: 'description',
+    align: 'left',
+    onClick: _ =>
+      (window.location = `/menu/transaction/purchase/${id}/description`)
+  },
+  {
+    name: 'finish',
+    align: 'left',
+    onClick: _ => {
+      /* todo api print */
+      window.location = `/menu/transaction/purchase`;
+    }
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/transaction/purchase')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const transactionReturnPurchase = _ => [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => {
+      /* todo api */
+    }
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const transactionReturnPurchaseUpdate = id => [
+  {
+    name: 'add',
+    align: 'left',
+    onClick: _ =>
+      (window.location = `/menu/transaction/return purchase/${id}/search`)
+  },
+  {
+    name: 'description',
+    align: 'left',
+    onClick: _ =>
+      (window.location = `/menu/transaction/return purchase/${id}/description`)
+  },
+  {
+    name: 'finish',
+    align: 'left',
+    onClick: _ => {
+      /* todo api print */
+      window.location = `/menu/transaction/return purchase`;
+    }
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/transaction/return purchase')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const transactionSale = _ => [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => {
+      /* todo api */
+    }
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const transactionSaleUpdate = id => [
+  {
+    name: 'add',
+    align: 'left',
+    onClick: _ => (window.location = `/menu/transaction/sale/${id}/search`)
+  },
+  {
+    name: 'description',
+    align: 'left',
+    onClick: _ => (window.location = `/menu/transaction/sale/${id}/description`)
+  },
+  {
+    name: 'finish',
+    align: 'left',
+    onClick: _ => {
+      /* todo api print */
+      window.location = `/menu/transaction/sale`;
+    }
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/transaction/sale')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const transactionService = _ => [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => {
+      /* todo api */
+    }
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const transactionServiceUpdate = id => [
+  {
+    name: 'add',
+    align: 'left',
+    onClick: _ => (window.location = `/menu/transaction/service/${id}/search`)
+  },
+  {
+    name: 'instruction',
+    align: 'left',
+    onClick: _ =>
+      (window.location = `/menu/transaction/service/${id}/instruction`)
+  },
+  {
+    name: 'description',
+    align: 'left',
+    onClick: _ =>
+      (window.location = `/menu/transaction/service/${id}/description`)
+  },
+  {
+    name: 'finish',
+    align: 'left',
+    onClick: _ => {
+      /* todo api print */
+      window.location = `/menu/transaction/service`;
+    }
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/transaction/service')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
 export const menu = _ => [
   {
     name: 'master',
