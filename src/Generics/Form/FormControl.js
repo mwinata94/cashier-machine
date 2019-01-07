@@ -37,6 +37,7 @@ class FormControl extends Component {
       date: (
         <input
           className="tile"
+          style={{ fontSize: '1em' }}
           name={this.props.e.name}
           onChange={this.onInputChange}
           type="date"

@@ -23,6 +23,13 @@ class UpdateTransactionDescription extends Component {
               rows: 3,
               cols: 60
               // value: data
+            },
+            {
+              name: 'date',
+              control: 'date',
+              value: '2018-07-22',
+              min: '2018-01-01',
+              max: '2018-12-31'
             }
           ],
           buttons: [
