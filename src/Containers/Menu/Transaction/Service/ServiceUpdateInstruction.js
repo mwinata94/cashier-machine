@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import MyHero from '../../../../Generics/MyHero/MyHero';
 import Form from '../../../../Generics/Form/Form';
 
-class UpdateTransactionDescription extends Component {
+class UpdateTransactionInstruction extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
     this.state = {
-      description: ''
+      instruction: ''
     };
   }
 
@@ -23,13 +23,6 @@ class UpdateTransactionDescription extends Component {
               rows: 3,
               cols: 60
               // value: data
-            },
-            {
-              name: 'date',
-              control: 'date',
-              value: '2018-07-22',
-              min: '2018-01-01',
-              max: '2018-12-31'
             }
           ],
           buttons: [
@@ -69,4 +62,4 @@ class UpdateTransactionDescription extends Component {
   }
 }
 
-export default UpdateTransactionDescription;
+export default UpdateTransactionInstruction;
