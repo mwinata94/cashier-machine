@@ -34,19 +34,29 @@ class FormControl extends Component {
 
   render() {
     const type = {
+      date: (
+        <input
+          className="tile"
+          name={this.props.e.name}
+          onChange={this.onInputChange}
+          type="date"
+          min={this.props.e.min}
+          max={this.props.e.max}
+          value={this.state.value}
+        />
+      ),
       input: (
         <input
           className="input is-large"
           name={this.props.e.name}
           onChange={this.onInputChange}
-          type={this.props.e.name}
           placeholder={this.props.e.name}
           value={this.state.value}
         />
       ),
       label: <div className="label is-large"> {this.state.value}</div>,
       select: (
-        <div class="select is-info is-large is-fullwidth">
+        <div className="select is-info is-large is-fullwidth">
           <select>
             {this.state.items &&
               this.state.items.map((e, i) => (
@@ -59,7 +69,7 @@ class FormControl extends Component {
       ),
       textarea: (
         <textarea
-          class="textarea"
+          className="textarea"
           placeholder={this.props.e.name}
           rows={this.props.e.rows}
           cols={this.props.e.cols}
