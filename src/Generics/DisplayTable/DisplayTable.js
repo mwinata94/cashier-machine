@@ -32,7 +32,7 @@ class DisplayTable extends Component {
           </div>
         );
       } else {
-        return <div classNam="is-size-3">No Data Found</div>;
+        return <div className="is-size-3">No Data Found</div>;
       }
     } else {
       return (
