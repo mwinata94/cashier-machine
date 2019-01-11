@@ -16,86 +16,67 @@ class ReportTable extends Component {
     if (this.props.table) {
       if (this.props.table.rows.length) {
         return (
-          <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-            <thead>
-              <tr>
-                {this.props.table.columns.map((e, i) => (
-                  <th key={i} className="has-text-centered">
-                    {e}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.table.rows.map((e, i) => (
-                <tr
-                  name={i}
-                  key={i}
-                  onClick={this.dropdownOnClick}
-                  onMouseEnter={e.onMouseEnter}
+          <div
+            className="table-container"
+            style={{ flex: '1 1 0', width: '100%' }}
+          >
+            {this.props.table.rows.map((e, i) => (
+              <div key={i} style={{ flex: '1 1 0', width: '100%' }}>
+                <div
+                  className="table-container"
+                  style={{ flex: '1 1 0', width: '100%' }}
                 >
-                  {e.columns.map((e, j) => (
-                    <td key={j} name={i}>
-                      {e}
-                    </td>
-                  ))}
-                  <div
-                    className="dropdown"
-                    name={i}
-                    style={{
-                      left: '0%',
-                      paddingTop: '2em',
-                      position: 'absolute',
-                      width: '100vw'
-                    }}
-                  >
-                    <div
-                      className="dropdown-menu"
-                      id="dropdown-menu"
-                      role="menu"
-                      style={{
-                        width: '95vw',
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
-                        position: 'relative'
-                      }}
-                    >
-                      <div className="dropdown-content">
-                        {
-                          <div className="dropdown-item">
-                            <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                              <thead>
-                                <tr>
-                                  {e.data.columns.map((e, i) => (
-                                    <th key={i} className="has-text-centered">
-                                      {e}
-                                    </th>
-                                  ))}
-                                </tr>
-                              </thead>
-                              <tbody>
-                                {e.data.rows.map((e, i) => (
-                                  <tr
-                                    key={i}
-                                    onClick={e.onClick}
-                                    onMouseEnter={e.onMouseEnter}
-                                  >
-                                    {e.columns.map((e, i) => (
-                                      <td key={i}>{e}</td>
-                                    ))}
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
-                          </div>
-                        }
-                      </div>
-                    </div>
-                  </div>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                  <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                    <thead>
+                      <tr>
+                        {this.props.table.columns.map((e, i) => (
+                          <th key={i} className="has-text-centered">
+                            {e}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr onMouseEnter={e.onMouseEnter}>
+                        {e.columns.map((e, j) => (
+                          <td key={j}>{e}</td>
+                        ))}
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div
+                  className="table-container"
+                  style={{ flex: '1 1 0', width: '100%' }}
+                >
+                  <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                    <thead>
+                      <tr>
+                        {e.data.columns.map((e, i) => (
+                          <th key={i} className="has-text-centered">
+                            {e}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {e.data.rows.map((e, i) => (
+                        <tr
+                          key={i}
+                          onClick={e.onClick}
+                          onMouseEnter={e.onMouseEnter}
+                        >
+                          {e.columns.map((e, i) => (
+                            <td key={i}>{e}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ))}
+          </div>
         );
       } else {
         return <div className="is-size-3">No Data Found</div>;

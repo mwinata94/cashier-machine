@@ -400,6 +400,19 @@ export const transactionServiceUpdate = id => [
   }
 ];
 
+export const reportAdjust = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/report/adjust')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
 export const menu = _ => [
   {
     name: 'master',
