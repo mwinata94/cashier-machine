@@ -90,6 +90,29 @@ export const masterMechanic = _ => [
   }
 ];
 
+export const masterCustomer = _ => [
+  {
+    name: 'create',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/customer/create')
+  },
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/customer/search')
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/master/customer')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
 export const masterGroup = _ => [
   {
     name: 'create',
@@ -465,6 +488,12 @@ export const menu = _ => [
         name: 'group',
         onClick: event => {
           window.location = '/menu/master/group';
+        }
+      },
+      {
+        name: 'customer',
+        onClick: event => {
+          window.location = '/menu/master/customer';
         }
       }
     ]
