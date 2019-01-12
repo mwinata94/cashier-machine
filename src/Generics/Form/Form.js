@@ -13,6 +13,12 @@ class Form extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    nextProps.formAttributes.queries
+      .filter(e => 'value' in e)
+      .map(e => this.setState({ [e.name]: e.value }));
+  }
+
   onChange(event) {
     this.props.onChange(event);
   }

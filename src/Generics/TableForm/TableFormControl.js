@@ -18,6 +18,12 @@ class TableFormControl extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      value: 'undefined' !== typeof nextProps.e.value ? nextProps.e.value : ''
+    });
+  }
+
   onInputChange(event) {
     this.setState({ value: event.target.value });
     this.props.onChange(event);
