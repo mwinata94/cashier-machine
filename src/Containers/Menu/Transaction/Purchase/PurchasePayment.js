@@ -6,7 +6,11 @@ class TransactionPurchasePayment extends Component {
   constructor(props) {
     super(props);
     this.onChange = this.onChange.bind(this);
-    this.state = {};
+    this.state = {
+      total: 0,
+      payment: 0,
+      change: 0
+    };
   }
 
   componentDidMount() {
@@ -25,7 +29,8 @@ class TransactionPurchasePayment extends Component {
             },
             {
               name: 'payment',
-              control: 'input'
+              control: 'input',
+              type: 'number'
             },
             {
               name: 'change',

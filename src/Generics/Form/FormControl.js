@@ -6,7 +6,7 @@ class FormControl extends Component {
     this.onInputChange = this.onInputChange.bind(this);
     this.onSelectChange = this.onSelectChange.bind(this);
     this.state = {
-      value: this.props.e.value ? this.props.e.value : ''
+      value: 'undefined' !== typeof this.props.e.value ? this.props.e.value : ''
     };
   }
 
@@ -53,6 +53,11 @@ class FormControl extends Component {
           onChange={this.onInputChange}
           placeholder={this.props.e.name}
           value={this.state.value}
+          type={
+            'undefined' !== typeof this.props.e.type
+              ? this.props.e.type
+              : 'text'
+          }
         />
       ),
       label: <div className="label is-large"> {this.state.value}</div>,
