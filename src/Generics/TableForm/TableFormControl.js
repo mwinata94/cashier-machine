@@ -6,7 +6,7 @@ class TableFormControl extends Component {
     this.onInputChange = this.onInputChange.bind(this);
     this.onSelectChange = this.onSelectChange.bind(this);
     this.state = {
-      value: this.props.e.value ? this.props.e.value : ''
+      value: 'undefined' !== typeof this.props.e.value ? this.props.e.value : ''
     };
   }
 
@@ -39,7 +39,11 @@ class TableFormControl extends Component {
           className="input"
           name={this.props.e.name}
           onChange={this.onInputChange}
-          type={this.props.e.name}
+          type={
+            'undefined' !== typeof this.props.e.type
+              ? this.props.e.type
+              : 'text'
+          }
           placeholder={this.props.e.name}
           value={this.state.value}
         />
