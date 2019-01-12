@@ -1,4 +1,5 @@
 import TransactionPurchase from './Purchase';
+import TransactionPurchasePayment from './PurchasePayment';
 import TransactionPurchaseUpdate from './PurchaseUpdate';
 import TransactionPurchaseUpdateDescription from './PurchaseUpdateDescription';
 import TransactionPurchaseUpdateItem from './PurchaseUpdateItem';
@@ -15,6 +16,11 @@ const TransactionPurchaseRoute = [
     path: '/menu/transaction/purchase/:tid',
     exact: true,
     component: TransactionPurchaseUpdate
+  },
+  {
+    path: '/menu/transaction/purchase/:tid/payment',
+    exact: true,
+    component: TransactionPurchasePayment
   },
   {
     path: '/menu/transaction/purchase/:tid/description',

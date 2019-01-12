@@ -260,8 +260,7 @@ export const transactionPurchaseUpdate = id => [
     name: 'finish',
     align: 'left',
     onClick: _ => {
-      /* todo api print */
-      window.location = `/menu/transaction/purchase`;
+      window.location = `/menu/transaction/purchase/${id}/payment`;
     }
   },
   {
