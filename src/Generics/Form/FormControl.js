@@ -4,14 +4,18 @@ class FormControl extends Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    this.onSelectChange = this.onSelectChange.bind(this);
     this.state = {
-      value: 'undefined' !== typeof this.props.e.value ? this.props.e.value : ''
+      value:
+        'undefined' !== typeof this.props.e.value ? this.props.e.value : '',
+      items: 'undefined' !== typeof this.props.e.items ? this.props.e.items : []
     };
   }
 
   componentDidMount() {
-    if ('select' === this.props.e.control) {
+    if (
+      'select' === this.props.e.control &&
+      'undefined' === typeof this.props.e.items
+    ) {
       // api
       //   .fetchSelect(this.props.e.name)
       //   .then(data => this.setState({ items: data }));
@@ -27,15 +31,6 @@ class FormControl extends Component {
   onInputChange(event) {
     this.setState({ value: event.target.value });
     this.props.onChange(event);
-  }
-
-  onSelectChange(option) {
-    this.props.onChange({
-      target: {
-        name: this.props.e.name,
-        value: option.value
-      }
-    });
   }
 
   render() {
@@ -68,14 +63,23 @@ class FormControl extends Component {
       ),
       label: <div className="label is-large"> {this.state.value}</div>,
       select: (
-        <div className="select is-info is-large is-fullwidth">
-          <select>
+        <div
+          className="select is-info is-large is-fullwidth"
+          onChange={this.onInputChange}
+        >
+          <select name={this.props.e.name}>
             {this.state.items &&
-              this.state.items.map((e, i) => (
-                <option key={i} value={e}>
-                  {e}
-                </option>
-              ))}
+              this.state.items.map((e, i) =>
+                this.state.value === e ? (
+                  <option key={i} value={e} selected>
+                    {e}
+                  </option>
+                ) : (
+                  <option key={i} value={e}>
+                    {e}
+                  </option>
+                )
+              )}
           </select>
         </div>
       ),

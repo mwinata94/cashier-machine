@@ -14,7 +14,7 @@ class TableForm extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    nextProps.formAttributes.queries
+    nextProps.tableFormAttributes.queries
       .filter(e => 'value' in e)
       .map(e => this.setState({ [e.name]: e.value }));
   }

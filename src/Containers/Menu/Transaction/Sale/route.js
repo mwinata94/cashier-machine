@@ -1,4 +1,5 @@
 import TransactionSale from './Sale';
+import TransactionSalePayment from './SalePayment';
 import TransactionSaleUpdate from './SaleUpdate';
 import TransactionSaleUpdateDescription from './SaleUpdateDescription';
 import TransactionSaleUpdateItem from './SaleUpdateItem';
@@ -15,6 +16,11 @@ const TransactionSaleRoute = [
     path: '/menu/transaction/sale/:tid',
     exact: true,
     component: TransactionSaleUpdate
+  },
+  {
+    path: '/menu/transaction/sale/:tid/payment',
+    exact: true,
+    component: TransactionSalePayment
   },
   {
     path: '/menu/transaction/sale/:tid/description',
