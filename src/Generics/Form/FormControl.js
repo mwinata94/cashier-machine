@@ -23,9 +23,9 @@ class FormControl extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({
-      value: 'undefined' !== typeof nextProps.e.value ? nextProps.e.value : ''
-    });
+    if ('undefined' !== typeof nextProps.e.value) {
+      this.setState({ value: nextProps.e.value });
+    }
   }
 
   onInputChange(event) {
@@ -66,20 +66,15 @@ class FormControl extends Component {
         <div
           className="select is-info is-large is-fullwidth"
           onChange={this.onInputChange}
+          value={this.state.value}
         >
           <select name={this.props.e.name}>
             {this.state.items &&
-              this.state.items.map((e, i) =>
-                this.state.value === e ? (
-                  <option key={i} value={e} selected>
-                    {e}
-                  </option>
-                ) : (
-                  <option key={i} value={e}>
-                    {e}
-                  </option>
-                )
-              )}
+              this.state.items.map((e, i) => (
+                <option key={i} value={e}>
+                  {e}
+                </option>
+              ))}
           </select>
         </div>
       ),

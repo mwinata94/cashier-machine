@@ -23,9 +23,9 @@ class TableFormControl extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({
-      value: 'undefined' !== typeof nextProps.e.value ? nextProps.e.value : ''
-    });
+    if ('undefined' !== typeof nextProps.e.value) {
+      this.setState({ value: nextProps.e.value });
+    }
   }
 
   onInputChange(event) {
@@ -53,21 +53,16 @@ class TableFormControl extends Component {
       select: (
         <div
           className="select is-info is-fullwidth"
+          value={this.state.value}
           onChange={this.onInputChange}
         >
           <select name={this.props.e.name}>
             {this.state.items &&
-              this.state.items.map((e, i) =>
-                this.state.value === e ? (
-                  <option key={i} value={e} selected>
-                    {e}
-                  </option>
-                ) : (
-                  <option key={i} value={e}>
-                    {e}
-                  </option>
-                )
-              )}
+              this.state.items.map((e, i) => (
+                <option key={i} value={e}>
+                  {e}
+                </option>
+              ))}
           </select>
         </div>
       ),

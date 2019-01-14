@@ -8,7 +8,8 @@ const ReportAdjustRoute = [
     component: Search
   },
   {
-    path: '/menu/report/adjust/:startDate/:endDate',
+    path:
+      '/menu/report/adjust/starting date/:startingDate/ending date/:endingDate/item/:item/selection/:selection',
     exact: true,
     component: Report
   }

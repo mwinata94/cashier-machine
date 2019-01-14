@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import SearchPage from '../../../../Generics/Page/Search';
 
-class ReportAdjustSearch extends Component {
+class ReportInventorySearch extends Component {
   render() {
     return (
       <SearchPage
-        navTable="reportAdjust"
+        navTable="reportInventory"
         queries={[
           {
             name: 'starting date',
@@ -18,12 +18,6 @@ class ReportAdjustSearch extends Component {
           {
             name: 'item',
             control: 'input'
-          },
-          {
-            name: 'selection',
-            control: 'select',
-            items: ['exact', 'include'],
-            value: 'exact'
           }
         ]}
       />
@@ -31,4 +25,4 @@ class ReportAdjustSearch extends Component {
   }
 }
 
-export default ReportAdjustSearch;
+export default ReportInventorySearch;

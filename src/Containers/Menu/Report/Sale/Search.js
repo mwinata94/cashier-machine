@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import SearchPage from '../../../../Generics/Page/Search';
 
-class ReportAdjustSearch extends Component {
+class ReportSaleSearch extends Component {
   render() {
     return (
       <SearchPage
-        navTable="reportAdjust"
+        navTable="reportSale"
         queries={[
           {
             name: 'starting date',
@@ -14,6 +14,14 @@ class ReportAdjustSearch extends Component {
           {
             name: 'ending date',
             control: 'date'
+          },
+          {
+            name: 'customer',
+            control: 'select'
+          },
+          {
+            name: 'retail sale',
+            control: 'select'
           },
           {
             name: 'item',
@@ -31,4 +39,4 @@ class ReportAdjustSearch extends Component {
   }
 }
 
-export default ReportAdjustSearch;
+export default ReportSaleSearch;
