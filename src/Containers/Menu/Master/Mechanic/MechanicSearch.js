@@ -17,11 +17,11 @@ class MasterMechanicSearch extends Component {
           },
           {
             name: 'starting date',
-            control: 'input'
+            control: 'date'
           },
           {
             name: 'ending date',
-            control: 'input'
+            control: 'date'
           },
           {
             name: 'description',
