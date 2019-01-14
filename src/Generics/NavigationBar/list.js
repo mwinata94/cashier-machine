@@ -430,6 +430,84 @@ export const reportAdjust = _ => [
   }
 ];
 
+export const reportInventory = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/report/inventory')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const reportPurchase = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/report/purchase')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const reportReturnPurchase = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/report/return purchase')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const reportSale = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/report/sale')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const reportService = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/report/service')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const reportSupplier = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/report/supplier')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
 export const menu = _ => [
   {
     name: 'master',
