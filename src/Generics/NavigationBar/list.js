@@ -722,6 +722,49 @@ export const menu = _ => [
     ]
   },
   {
+    name: 'list',
+    align: 'left',
+    onClick: event => {},
+    child: [
+      {
+        name: 'inventory',
+        onClick: event => {
+          window.location = '/menu/list/inventory';
+        }
+      },
+      {
+        name: 'divider'
+      },
+      {
+        name: 'supplier',
+        onClick: event => {
+          window.location = '/menu/list/supplier';
+        }
+      },
+      {
+        name: 'divider'
+      },
+      {
+        name: 'location',
+        onClick: event => {
+          window.location = '/menu/list/location';
+        }
+      },
+      {
+        name: 'type',
+        onClick: event => {
+          window.location = '/menu/list/type';
+        }
+      },
+      {
+        name: 'group',
+        onClick: event => {
+          window.location = '/menu/list/group';
+        }
+      }
+    ]
+  },
+  {
     name: 'wish list',
     align: 'right',
     onClick: event => {
