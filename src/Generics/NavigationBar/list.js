@@ -508,6 +508,71 @@ export const reportSupplier = _ => [
   }
 ];
 
+export const listGroup = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/list/group')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const listInventory = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/list/inventory')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const listLocation = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/list/location')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const listSupplier = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/list/supplier')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
+export const listType = _ => [
+  {
+    name: 'search',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/list/type')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
 export const menu = _ => [
   {
     name: 'master',
