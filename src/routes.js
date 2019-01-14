@@ -1,6 +1,11 @@
 import Error404Route from './Containers/Error/404/route';
 import MainRoute from './Containers/Main/route';
 import MenuRoute from './Containers/Menu/route';
+import MenuListGroup from './Containers/Menu/List/Group/route';
+import MenuListInventory from './Containers/Menu/List/Inventory/route';
+import MenuListLocation from './Containers/Menu/List/Location/route';
+import MenuListSupplier from './Containers/Menu/List/Supplier/route';
+import MenuListType from './Containers/Menu/List/Type/route';
 import MenuMasterCustomer from './Containers/Menu/Master/Customer/route';
 import MenuMasterGroup from './Containers/Menu/Master/Group/route';
 import MenuMasterInventory from './Containers/Menu/Master/Inventory/route';
@@ -27,6 +32,11 @@ const routes = [
   ...Error404Route,
   ...MainRoute,
   ...MenuRoute,
+  ...MenuListGroup,
+  ...MenuListInventory,
+  ...MenuListLocation,
+  ...MenuListSupplier,
+  ...MenuListType,
   ...MenuMasterCustomer,
   ...MenuMasterGroup,
   ...MenuMasterInventory,
