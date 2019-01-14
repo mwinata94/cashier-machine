@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import IndexPage from '../../../../Generics/Page/Index';
 
-class Index extends Component {
+class Result extends Component {
   render() {
     return <IndexPage navTable="listGroup" alignTop={true} />;
   }
 }
 
-export default Index;
+export default Result;

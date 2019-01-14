@@ -1,51 +1,46 @@
-import Index from './Index';
+import Result from './Result';
 import Search from './Search';
 
 const Route = [
   {
     path: '/menu/list/group',
     exact: true,
-    component: Index
-  },
-  {
-    path: '/menu/list/group/search',
-    exact: true,
     component: Search
   },
   {
-    path: '/menu/list/group/search/id/:id',
+    path: '/menu/list/group/id/:id',
     exact: true,
-    component: Index
+    component: Result
   },
   {
-    path: '/menu/list/group/search/name/:name',
+    path: '/menu/list/group/name/:name',
     exact: true,
-    component: Index
+    component: Result
   },
   {
-    path: '/menu/list/group/search/description/:description',
+    path: '/menu/list/group/description/:description',
     exact: true,
-    component: Index
+    component: Result
   },
   {
-    path: '/menu/list/group/search/id/:id/name/:name',
+    path: '/menu/list/group/id/:id/name/:name',
     exact: true,
-    component: Index
+    component: Result
   },
   {
-    path: '/menu/list/group/search/id/:id/description/:description',
+    path: '/menu/list/group/id/:id/description/:description',
     exact: true,
-    component: Index
+    component: Result
   },
   {
-    path: '/menu/list/group/search/name/:name/description/:description',
+    path: '/menu/list/group/name/:name/description/:description',
     exact: true,
-    component: Index
+    component: Result
   },
   {
-    path: '/menu/list/group/search/id/:id/name/:name/description/:description',
+    path: '/menu/list/group/id/:id/name/:name/description/:description',
     exact: true,
-    component: Index
+    component: Result
   }
 ];
 
