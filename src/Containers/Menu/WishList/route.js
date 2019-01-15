@@ -1,11 +1,11 @@
-import WishList from './WishList';
+import Index from './Index';
 
-const WishListRoute = [
+const Route = [
   {
     path: '/menu/wishlist',
     exact: true,
-    component: WishList
+    component: Index
   }
 ];
 
-export default WishListRoute;
+export default Route;

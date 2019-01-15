@@ -573,6 +573,24 @@ export const listType = _ => [
   }
 ];
 
+export const wishList = _ => [
+  {
+    name: 'order',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/wishlist/order')
+  },
+  {
+    name: 'default',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/wishlist')
+  },
+  {
+    name: 'menu',
+    align: 'right',
+    onClick: event => (window.location = '/menu')
+  }
+];
+
 export const menu = _ => [
   {
     name: 'master',
