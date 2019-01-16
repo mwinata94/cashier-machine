@@ -4,12 +4,13 @@
   "author": "Michael Winata",
   "description": "",
   "keywords": [],
-  "main": "index.js",
   "dependencies": {
     "express": "^4.16.4"
   },
   "devDependencies": {},
-  "scripts": {},
+  "scripts": {
+      "start": "node app.js"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
