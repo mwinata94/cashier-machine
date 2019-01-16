@@ -1,18 +1,19 @@
 {
-    "name": "cashier-machine",
-    "version": "1.0.0",
-    "author": "Michael Winata",
-    "description": "",
-    "keywords": [],
-    "main": "index.js",
-    "dependencies": {},
-    "devDependencies": {},
-    "scripts": {},
-    "browserslist": [
-      ">0.2%",
-      "not dead",
-      "not ie <= 11",
-      "not op_mini all"
-    ]
-  }
-  
+  "name": "cashier-machine",
+  "version": "1.0.0",
+  "author": "Michael Winata",
+  "description": "",
+  "keywords": [],
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
