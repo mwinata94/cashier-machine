@@ -575,6 +575,11 @@ export const listType = _ => [
 
 export const wishList = _ => [
   {
+    name: 'create',
+    align: 'left',
+    onClick: _ => (window.location = '/menu/wishlist/create')
+  },
+  {
     name: 'order',
     align: 'left',
     onClick: _ => (window.location = '/menu/wishlist/order')
