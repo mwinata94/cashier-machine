@@ -55,7 +55,7 @@ class Form extends Component {
     } else {
       return (
         <div className="container has-text-centered">
-          <a className="button is-success is-loading is-large">Loading</a>
+          <a className="button is-success is-loading is-large" href="#no-where">Loading</a>
         </div>
       );
     }

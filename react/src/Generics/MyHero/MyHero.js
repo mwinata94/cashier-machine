@@ -29,7 +29,7 @@ class MyHero extends Component {
               className="navbar-brand"
               style={{ flexGrow: 1, justifyContent: 'center' }}
             >
-              <a className="navbar-item">{this.props.footer}</a>
+              <a className="navbar-item" href="#no-where">{this.props.footer}</a>
             </div>
           </nav>
         )}

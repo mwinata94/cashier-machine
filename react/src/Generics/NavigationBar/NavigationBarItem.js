@@ -5,7 +5,7 @@ class NavigationBarItem extends Component {
     if (this.props.e.child) {
       return (
         <div className="navbar-item has-dropdown is-hoverable">
-          <a className="navbar-link is-size-3" onClick={this.props.e.onClick}>
+          <a className="navbar-link is-size-3" onClick={this.props.e.onClick} href="#no-where">
             {this.props.e.name}
           </a>
           <div className="navbar-dropdown">
@@ -18,6 +18,7 @@ class NavigationBarItem extends Component {
                     key={i}
                     className="navbar-item is-size-3"
                     onClick={e.onClick}
+                    href="#no-where"
                   >
                     {e.name}
                   </a>
@@ -29,7 +30,7 @@ class NavigationBarItem extends Component {
       );
     } else {
       return (
-        <a className="navbar-item is-size-3" onClick={this.props.e.onClick}>
+        <a className="navbar-item is-size-3" onClick={this.props.e.onClick} href="#no-where">
           {this.props.e.name}
         </a>
       );

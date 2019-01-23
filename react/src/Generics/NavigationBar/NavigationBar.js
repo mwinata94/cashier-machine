@@ -35,7 +35,7 @@ class NavigationBar extends Component {
         aria-label="main navigation"
       >
         <div className="navbar-brand">
-          <a className="navbar-item">
+          <a className="navbar-item" href="#no-where">
             <img
               src="https://seeklogo.com/images/Y/Yamaha-logo-A3BB6DB4EB-seeklogo.com.png"
               width="36"
@@ -63,7 +63,7 @@ class NavigationBar extends Component {
               ))}
           </div>
           <div className="navbar-end">
-            <a className="navbar-item is-size-6">
+            <a className="navbar-item is-size-6" href="#no-where">
               Today is&nbsp;
               <Time value={this.state.time} format="HH:mm:ss DD/MM/YYYY" />
             </a>
