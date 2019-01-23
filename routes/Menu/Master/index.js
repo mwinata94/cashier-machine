@@ -1,0 +1,18 @@
+const router = require('express').Router();
+const CustomerRoute = require('./Customer');
+const GroupRoute = require('./Group');
+const InventoryRoute = require('./Inventory');
+const LocationRoute = require('./Location');
+const MechanicRoute = require('./Mechanic');
+const RetailSaleRoute = require('./RetailSale');
+const SupplierRoute = require('./Supplier');
+const TypeRoute = require('./Type');
+router.use(CustomerRoute);
+router.use(GroupRoute);
+router.use(InventoryRoute);
+router.use(LocationRoute);
+router.use(MechanicRoute);
+router.use(RetailSaleRoute);
+router.use(SupplierRoute);
+router.use(TypeRoute);
+module.exports = router;

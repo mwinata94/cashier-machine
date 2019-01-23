@@ -1,0 +1,16 @@
+const router = require('express').Router();
+const AdjustRoute = require('./Adjust');
+const InventoryRoute = require('./Inventory');
+const PurchaseRoute = require('./Purchase');
+const ReturnPurchaseRoute = require('./ReturnPurchase');
+const SaleRoute = require('./Sale');
+const ServiceRoute = require('./Service');
+const SupplierRoute = require('./Supplier');
+router.use(AdjustRoute);
+router.use(InventoryRoute);
+router.use(PurchaseRoute);
+router.use(ReturnPurchaseRoute);
+router.use(SaleRoute);
+router.use(ServiceRoute);
+router.use(SupplierRoute);
+module.exports = router;

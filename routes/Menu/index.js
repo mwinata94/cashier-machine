@@ -1,0 +1,12 @@
+const router = require('express').Router();
+const ListRoute = require('./List');
+const MasterRoute = require('./Master');
+const ReportRoute = require('./Report');
+const TransactionRoute = require('./Transaction');
+const WishListRoute = require('./WishList');
+router.use(ListRoute);
+router.use(MasterRoute);
+router.use(ReportRoute);
+router.use(TransactionRoute);
+router.use(WishListRoute);
+module.exports = router;
