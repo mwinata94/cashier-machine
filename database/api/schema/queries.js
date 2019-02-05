@@ -26,3 +26,12 @@ export const CREATE_GROUP_TABLE = `CREATE TABLE groups (
     description text,
     PRIMARY KEY(id)
 );`
+
+export const CREATE_SUPPLIER_TABLE = `CREATE TABLE suppliers (
+    id varchar(6),
+    name varchar(60),
+    address varchar(60),
+    phone varchar(60),
+    description text,
+    PRIMARY KEY(id)
+);`
