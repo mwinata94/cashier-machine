@@ -19,3 +19,10 @@ export const CREATE_TYPE_TABLE = `CREATE TABLE tables (
     description text,
     PRIMARY KEY(id)
 );`
+
+export const CREATE_GROUP_TABLE = `CREATE TABLE groups (
+    id varchar(6),
+    name varchar(60),
+    description text,
+    PRIMARY KEY(id)
+);`
