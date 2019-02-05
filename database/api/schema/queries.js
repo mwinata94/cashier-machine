@@ -35,3 +35,11 @@ export const CREATE_SUPPLIER_TABLE = `CREATE TABLE suppliers (
     description text,
     PRIMARY KEY(id)
 );`
+
+export const CREATE_CUSTOMER_TABLE = `CREATE TABLE customers (
+    id varchar(6),
+    name varchar(60),
+    cut integer,
+    description text,
+    PRIMARY KEY(id)
+);`
