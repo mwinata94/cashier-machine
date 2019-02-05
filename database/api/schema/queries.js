@@ -12,3 +12,10 @@ export const CREATE_LOCATION_TABLE = `CREATE TABLE locations (
     description text,
     PRIMARY KEY(id)
 );`
+
+export const CREATE_TYPE_TABLE = `CREATE TABLE tables (
+    id varchar(6),
+    name varchar(60),
+    description text,
+    PRIMARY KEY(id)
+);`
