@@ -5,3 +5,10 @@ export const CREATE_USER_TABLE = `CREATE TABLE users (
     level integer,
     PRIMARY KEY(id)
 );`
+
+export const CREATE_LOCATION_TABLE = `CREATE TABLE locations (
+    id varchar(6),
+    name varchar(60),
+    description text,
+    PRIMARY KEY(id)
+);`
