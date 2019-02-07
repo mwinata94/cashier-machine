@@ -44,7 +44,7 @@ export const CREATE_CUSTOMER_TABLE = `CREATE TABLE customers (
     PRIMARY KEY(id)
 );`
 
-export const CREATE_CUSTOMER_TABLE = `CREATE TABLE retail_sales (
+export const CREATE_RETAIL_SALE_TABLE = `CREATE TABLE retail_sales (
     id varchar(6),
     name varchar(60),
     starting_date date,
