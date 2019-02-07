@@ -52,3 +52,12 @@ export const CREATE_RETAIL_SALE_TABLE = `CREATE TABLE retail_sales (
     description text,
     PRIMARY KEY(id)
 );`
+
+export const CREATE_MECHANIC_TABLE = `CREATE TABLE mechanic (
+    id varchar(6),
+    name varchar(60),
+    starting_date date,
+    ending_date date,
+    description text,
+    PRIMARY KEY(id)
+);`
