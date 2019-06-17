@@ -15,7 +15,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "SET DEBUG=CashierMachine:*&node ./bin/www"
+    "start": "SET DEBUG=CashierMachine:*&node ./bin/www",
+    "linux:start": "DEBUG=CashierMachine & node ./bin/www"
   },
   "browserslist": [
     ">0.2%",
